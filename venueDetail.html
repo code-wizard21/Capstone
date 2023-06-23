@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/venueDetail.css">
+    <title>Venue Detail</title>
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+<body id="bodyy">
+    <div id="outermost_div">
+
+        <div id="header" style="margin-bottom: 5px;">
+
+            <div id="explorenavbar">
+
+                <div id="logodiv" >
+                    <img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo">
+                </div>
+        
+                <div id="nav2div"> 
+                    <img id="pplogo" src="https://playo-website.gumlet.net/playo_functional/Icons/user_blank.svg" alt="">
+                    <p id="myBtn" class="loginp">Login/Signup</p>
+                    <img id="dropdownarrow" src="https://playo-website.gumlet.net/playo_functional/Icons/arrow_light.svg" alt="arrow">
+                </div>
+        
+               
+        
+                <!--    popupwindow -->
+                <div id="modal_container" style="z-index: 5;">
+        
+                    <div id="modal">
+                        <img id="close" src="https://playo-website.gumlet.net/playo_functional/Icons/closeButton.svg" alt="">
+        
+                        <div id="login_left_div">
+                            <img width="100%" src="https://playo-website.gumlet.net/icons/login-graphics.png?auto=compress,format" alt="">
+                        </div>
+                        <div id="login_right_div">
+                            <p id="entermobile">Enter Your Mobile Number</p>
+        
+                            <div id="user_phone_div">
+                                <div>
+                                    <div id="countrySpan">
+                                        <span>
+                                            <div id="selectCallingCode">
+                                                <span style="font-size: 14px; color: #424242;" id="rem1">IND</span>
+                                                <span style="font-size: 14px; color: #424242;" id="rem2">+91</span>
+                                                <img id="countryDrop" src="https://s3.ap-south-1.amazonaws.com/playo-website/booking/selectCountry.svg" alt="dropdown">
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <span>
+                                    <input id="input" type="number" placeholder="Mobile Number *" value="">
+                                    <hr style="margin-top: -1px; margin-left: -65%; width: 220%;">
+                                </span>
+                                
+                            </div>
+        
+                            <button id="sendOTP" style="font-size: 1em;">SEND OTP</button>
+                            <button id="giveOTP"  style="font-size: 1em;" >Enter OTP</button>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+
+        </div>
+
+        <!-- gif div start -->
+        <div id="gif_div">
+            <a href="https://playo.co/download?utm_source=website&utm_medium=banner">
+                <img height="100%" src="https://s3.ap-south-1.amazonaws.com/playo-website/gifs/masthead.gif" alt="playo gif">
+            </a>
+        </div>
+        <!-- gif div end -->
+
+        <!-- image div start -->
+        <div id="image_div">
+
+            <div id="booknow_div">
+                <h2 id="name" style="margin: 7.8% 0 0 7.8%; padding: 0; font-size: 28px;"></h2>
+                <h2 id="ground_name" style="font-style: italic; font-size: 19.5px; line-height: 33px; font-weight: 700; margin: 5% 7%; "></h2>
+
+                <!-- rate div start -->
+                <div id="rate_div">
+                    <p id="rate" style="margin: -0.5% 0 0 9.5%; padding: 0; font-size: 22px; font-weight: bold;"></p> 
+                    <p style="margin: -0.5% 0 0 10%; font-size: 21px; padding: 0;" >( <span id="rateCount"></span> Votes )</p>
+                    <p id="rateVenue" style=" cursor: pointer; margin: 0; font-size: 18px; text-decoration: underline; padding: 0; color: white; margin-left: 10%;">Rate venue</p>
+                </div>
+                <!-- rate div end -->
+
+                <div style="text-align: center;">
+                    <button id="booknow_btn" style="font-size: 18px; font-weight: 600;">Book Now</button>
+                </div> 
+            </div>
+
+            <div id="different_ratings">
+                <div class="rating">
+                    <div class="box">Awesome</div>
+                    <div class="star"><img width="57%" height="60%" src="https://playo-website.gumlet.net/playo_functional/Icons/favourite-31-outline-64.svg" alt="" style="margin: 7px;"></div>
+                </div>
+
+                <div class="rating">
+                    <div class="box" style="width: 70px; margin-left: 20px;">Good</div>
+                    <div class="star"><img width="57%" height="60%" src="https://playo-website.gumlet.net/playo_functional/Icons/favourite-31-outline-64.svg" alt="" style="margin: 7px;"></div>
+                </div>
+
+                <div class="rating">
+                    <div class="box" style="width: 60px; margin-left: 25px;" >Meh</div>
+                    <div class="star"><img width="57%" height="60%" src="https://playo-website.gumlet.net/playo_functional/Icons/favourite-31-outline-64.svg" alt="" style="margin: 7px;"></div>
+                </div>
+
+                <div class="rating">
+                    <div class="box" style="width: 60px; margin-left: 25px;" >Bad</div>
+                    <div class="star"><img width="57%" height="60%" src="https://playo-website.gumlet.net/playo_functional/Icons/favourite-31-outline-64.svg" alt="" style="margin: 7px;"></div>
+                </div>
+
+                <div class="rating">
+                    <div class="box">Really Bad</div>
+                    <div class="star"><img width="57%" height="60%" src="https://playo-website.gumlet.net/playo_functional/Icons/favourite-31-outline-64.svg" alt="" style="margin: 7px;"></div>
+                </div>
+            </div>
+            
+            <div id="mask">
+                <svg id='hideSvg'>
+                    <filter id='sharpBlur'>
+                    <feGaussianBlur stdDeviation='6'></feGaussianBlur>
+                    <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+                    <feComposite in2='SourceGraphic' operator='in'></feComposite>
+                    </filter>
+                </svg>
+
+                <div id="blur">
+                    <img id='svgBlur' src='https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1640172478587.jpeg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Fstorage.googleapis.com%2Fplayoapp%2Flogo%2Fplayo-imgix-white.png&markalign=bottom%2Cright&markalpha=50&markfit=clip&markscale=20&markpad=12&markw=160&w=1446'>
+                </div>
+            </div>
+
+            <div id="content">
+                <img id="notBlur" src='https://playo.gumlet.io/SPORTSALLEY/SouthUnitedFootballClub1640172478587.jpeg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Fstorage.googleapis.com%2Fplayoapp%2Flogo%2Fplayo-imgix-white.png&markalign=bottom%2Cright&markalpha=50&markfit=clip&markscale=20&markpad=12&markw=160&w=1446'>
+            </div>
+            
+        </div>
+        <!-- image div end -->
+
+        <div id="main_div">
+
+            <div id="left_div">
+
+                <div id="safehygiene">
+                    <div class="greendivtop"></div>
+                    <div style="display: flex;">
+                        <img width="25px" height="5%" style="margin: 11px 5px 0 15px;" src="https://playo-website.gumlet.net/icons/sh.jpeg?auto=compress,format&q=90" alt="">
+                        <p style="color: #424242; line-height: 15px; font-size: 14px;">Safe & Hygiene</p>
+
+                        <a style="color: #424242; margin: 11px 0 0 70%; font-size: 14px; letter-spacing: -0.4px; font-weight: bold;" href="https://blog.playo.co/guidelines-to-playsafe-in-the-times-of-covid-19/">Know More</a>
+                    </div>
+
+                    <div id="secondDiv">
+                        <div style="margin-top: 6px;">
+                            <img class="safeicon" src="https://playo.gumlet.net/icons/sanitizer_3x.png" alt="">
+                            <p class="text">Sanitized Court</p>
+                        </div>
+
+                        <div style="margin-top: 7px;">
+                            <img class="safeicon" src="https://playo.gumlet.net/icons/mask_3x.png" alt="">
+                            <p class="text">Mask Are Must</p>
+                        </div>
+
+                        <div>
+                            <img class="safeicon" src="https://playo.gumlet.net/icons/temp_3x.png" alt="">
+                            <p class="text">Temprature Check</p>
+                        </div>
+
+                        <div style="margin-top: 2px;">
+                            <img class="safeicon" src="https://playo.gumlet.net/icons/hand_3x.png" alt="">
+                            <p class="text">Handwash Station</p>
+                        </div>
+                    </div>
+                    <div class="greendivbottom"></div>
+                </div>
+
+                <div id="sportsavailable">
+                    <p id="amenties_text">SPORTS AVAILABLE</p> 
+                    
+                    <div style=" width: 50px; text-align: center; height: 80px; margin-left: 17px;" >
+                        <img style="margin-left: 5%;" width="100%"  src="https://playo.imgix.net/SPORTICONS/SP2/ic_football_green.png?auto=format,compress&h=70" alt="">
+                    
+                        <p style="margin-left: 5%; margin-top: 5px;" id="cat">Football</p>
+                    </div>
+                    
+                </div>
+
+                <div id="additionalinfo">
+                    <p id="amenties_text">ADITIONAL INFO</p>
+                    
+                    <div style="margin-left: 2%;">
+                        Football: <br>
+                        - It is recommended but not compulsory to wear football studs while playing at the facility.
+                       <br> - Metal studs are not allowed.
+                    </div>
+                </div>
+
+                <div id="amenities">
+                    <p id="amenties_text">AMENTIES</p>
+
+                    <div id="grid_text">
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Valet Parking</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Restrooms</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Dressing Room</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Sitting Stand</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Gym</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">First Aid</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Shower</p>
+                        </div>
+
+                        <div class="grid_text_item">
+                            <img class="check" src="https://playo-website.gumlet.net/venues-listing/check-circle-filled.svg" alt="">
+                            <p style="letter-spacing: 1px; font-size: 15px; font-weight: 100; color: #424242;">Drinking Water</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="relatedto">
+                    <p id="relatedto_text">Related to South United Football Club, RBANM's Ground</p>
+                    <a style="text-decoration: none;" href="/"><p style=" margin-left: 10px; font-weight: 2.0; font-size: 13px; letter-spacing: 0.5px; line-height: 18px; color: #808080;">Sports Clubs in RBANM's Ground, Football Grounds in RBANM's Ground, Football Grounds in Bengaluru, Sports Clubs in Bengaluru</p></a>
+                </div>
+            </div>
+
+            <!-- Right div start -->
+            <div id="right_div">
+                <div id="timing">
+                    <p id="amenties_text" style="margin: 0; width: 88%; margin-left: 6%; margin-bottom: 10px;">TIMING</p> 
+                    <div id="time_duration">
+                        6 AM-12 AM
+                    </div>
+                </div>
+
+                <div id="location">
+                    <p id="amenties_text" style="margin: 0; width: 88%; margin-left: 6%; margin-bottom: 10px;">LOCATION</p> 
+
+                    <div id="address">
+                        South United Football Club, RBANM's Grounds, Gate No 3, Gangadhar Chetty Road, near Ulsoor, Bengaluru, Karnataka
+                    </div>
+
+                    <div id="map_div">
+
+                    </div>
+                </div>
+
+                <!-- share button -->
+                <button id="share_btn">Share</button>
+
+                <!-- book now button -->
+                <button id="booknow_btn2" style="margin-left: -8px; font-size: 18px; font-weight: 600;">Book Now</button>
+
+            </div>
+            <!-- Right Div end -->
+
+        </div>
+
+        <div id="footer">
+            <div id="infooter">
+                <div id="div1">
+                    <div id="weblogo">
+                        <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
+                    </div>
+                    <div id="playstore">
+                        <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
+                            <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
+                        </a>
+                        <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
+                            <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
+                        </a>
+                    </div>
+                    <div id="copyright">
+                        <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
+                    </div>
+                    <div id="loweritems">
+                        <a href="faq.html"><p>FAQs</p></a>
+                        <a href=""><p>Privacy POlicy</p></a>
+                        <a href=""><p>Terms Of Service</p></a>
+                        <a href=""><p>Cancellation & Refund Policy</p></a>
+                        <a href=""><p>Careers</p></a>
+                        <a href=""><p id="hiring">We're Hiring!</p></a>
+                    </div>
+                </div>
+                <div id="div2">
+                    <a href="about.html"><p>About Us</p></a>
+                    <a href="partner.html"><p>Partner With Us</p></a>
+                    <a href="brandact.html"><p>Brand Activations</p></a>
+                    <a href="corporate.html"><p>Corporate Offerings</p></a>
+                    <a href="contact.html"><p>contact Us</p></a>
+                </div>
+                <div id="div3">
+                    <a href="venues.html"><p>Book Venues</p></a>
+                    <a href="activities.html"><p>Activities</p></a>
+                    <a href="blog.html"><p>Blog</p></a>
+                    <a href="faq.html"><p>FAQ's</p></a>
+                </div>
+                <div id="div4">
+                    <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
+                    <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
+                    <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
+                    <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- need help button div -->
+      <a href="contact.html">
+        <div id="needhelp">
+            <p>Need help?</p>
+            <img id="needhelpiconimage" src="https://playo-website.gumlet.net/venues-listing/maximize.svg" width="10%" height="60%">
+        </div>
+     </a>
+
+
+
+</body>
+</html>
+
+<script>
+
+
+
+    
+//Login and pop up full functionalities start
+
+document.querySelector("#logo").addEventListener("click", ()=>{
+    window.location.href = "index.html";
+})
+
+
+// navbar popup functionality
+document.querySelector("#giveOTP").style.visibility = "hidden";
+
+const open = document.getElementById("nav2div");
+const modal_container = document.getElementById("modal_container");
+const close = document.getElementById("close");
+
+open.addEventListener("click", ()=>{
+    modal_container.classList.add("show")
+});
+
+close.addEventListener("click", ()=>{
+    modal_container.classList.remove("show")
+});
+
+
+
+
+//If user is logged in 
+login()
+
+function login(){
+    console.log("test")
+    let loginStatus = localStorage.getItem("login")
+    console.log(typeof(loginStatus))
+    if(loginStatus === "true"){
+        let ph = localStorage.getItem("mobileNumber");
+        console.log(ph)
+        document.querySelector("#myBtn").textContent = ph;
+        open.addEventListener("click", ()=>{
+            modal_container.classList.remove("show")
+            window.location.href = "login_profile.html";
+        })
+    
+    }
+    else{
+        return false;
+    }
+
+}
+
+
+
+//When user add mobile number to it
+document.querySelector("#sendOTP").addEventListener("click", ()=>{
+    let mobNo = document.querySelector("#input").value;
+    if(mobNo.length != 10){
+        alert("Please Give correct Mobile Number");
+    }
+    else{
+        localStorage.setItem("mobileNumber", mobNo);
+        // modal_container.style.visibility = "hidden";
+        // document.querySelector(".loginp")
+        document.querySelector("#entermobile").textContent = `We have sent an OTP to ${mobNo}`;
+        document.querySelector("#rem1").style.visibility = "hidden";
+        document.querySelector("#rem2").style.visibility = "hidden";
+        document.querySelector("#countryDrop").style.visibility = "hidden";
+        document.querySelector("#input").value = null;
+        document.querySelector("#input").placeholder = "Enter OTP"
+        document.querySelector("input").style.textAlign = "center";
+        document.querySelector("#sendOTP").style.visibility = "hidden";
+        document.querySelector("#giveOTP").style.visibility = "visible";
+
+        document.querySelector("#giveOTP").addEventListener("click", ()=>{
+
+            let otp = document.querySelector("input").value;
+            if(otp == "123456"){
+                // alert("success");
+                modal_container.classList.remove("show")
+                document.querySelector("#myBtn").textContent = mobNo;
+                localStorage.setItem("login", true);
+
+
+                open.addEventListener("click", ()=>{
+                    modal_container.classList.remove("show")
+                    window.location.href = "login_profile.html";
+                    login()
+
+                })
+
+
+            }
+            else{
+                alert("Wrong OTP");
+                document.querySelector("#entermobile").textContent = `Enter Your mobile number`;
+                document.querySelector("#rem1").style.visibility = "visible";
+                document.querySelector("#rem2").style.visibility = "visible";
+                document.querySelector("#countryDrop").style.visibility = "visible";
+                document.querySelector("#input").value = null;
+                document.querySelector("#input").placeholder = "Enter Mobile Number"
+                document.querySelector("#sendOTP").style.visibility = "visible";
+                document.querySelector("#giveOTP").style.visibility = "hidden";
+
+            }
+
+        })
+       
+    }
+})
+
+//Login and pop up full functionalities end
+
+
+
+
+
+
+
+    let data = JSON.parse(localStorage.getItem("singleVenueDetails"));
+    let { name, imgUrl ,rating , filter_by} = data;
+    let category = filter_by[0];
+    let vote = localStorage.getItem("votes")
+    console.log(data, category, vote)
+
+    //Append value
+    document.querySelector("#name").textContent = name;
+    document.querySelector("#ground_name").textContent = "RBANM's Ground";
+    document.querySelector("#rate").textContent = rating;
+    document.querySelector("#rateCount").textContent = vote;
+    document.querySelector("#cat").textContent = category;
+    document.querySelector("#notBlur").src = imgUrl;
+    document.querySelector("#svgBlur").src = imgUrl;
+
+    map_div.innerHTML = `<iframe
+                                width= "100%"
+                                height= "100%"
+                                style="border:0"
+                                loading="lazy"
+                                allowfullscreen
+                                src="https://maps.google.com/maps?q=${name}&t=&z=13&ie=UTF8$iwloc=&output=embed">
+                        </iframe>`
+
+    
+
+    let rateVenue = document.getElementById("rateVenue");
+    let different_ratings = document.getElementById("different_ratings");
+    rateVenue.addEventListener("click", ()=>{
+        different_ratings.classList.add("show")
+    })
+    
+    let count = 0;
+    document.addEventListener('click', (event)=>{
+        if(event.target) {
+            count++;
+        }
+        if(count == 2) {
+            count =0;
+            different_ratings.classList.remove("show")
+        }
+    });
+
+
+   // mobile page append here
+    document.addEventListener("click", (event) => {
+        if (!event.target.matches('.bodyy') && event.target.matches('.different_ratings')) {
+            different_ratings.classList.add("");
+        }
+    }, true)
+
+
+    // document.addEventListener('click', (event) => {
+    //     if (!event.target.matches('.bodyy')) {
+    //         different_ratings.classList.remove("show");
+    //     }
+    // }, true);
+
+    // document.addEventListener('click', function (event) {
+    //     if (!event.target.matches('.different_ratings')) {
+    //         // location.reload();
+    //         different_ratings.classList.add("show");
+    //     }
+    // }, false);
+
+    // let venue_arr = [
+    //     {
+    //         name : "South United Football Club",
+    //         groundName : "RBANM's Ground",
+    //         lat : 12.871859,
+    //         lng : 77.615578,
+    //         rating : 5,
+    //         ratingCount : 6,
+    //         filter_by : "Football"
+    //     }
+    // ];
+
+    // let map_div = document.getElementById("map_div");
+    // let clubname = document.getElementById("name");
+    // let ground_name = document.getElementById("ground_name");
+    // let rate = document.getElementById("rate");
+    // let rateCount = document.getElementById("rateCount");
+
+
+    // let clicked = "South United Football Club"
+    // venue_arr.forEach((ele) => {
+    //     if(ele.name === clicked){
+    //         map_div.innerHTML = "";
+    //         clubname.innerHTML = "";
+    //         ground_name.innerHTML = "";
+    //         rate.innerHTML = "";
+    //         rateCount.innerHTML = "";
+    //         map_div.innerHTML = `<iframe
+    //                             width= "100%"
+    //                             height= "100%"
+    //                             style="border:0"
+    //                             loading="lazy"
+    //                             allowfullscreen
+    //                             src="https://maps.google.com/maps?q=${ele.name}&t=&z=13&ie=UTF8$iwloc=&output=embed">
+    //                     </iframe>`
+    //         clubname.innerHTML = ele.name;
+    //         ground_name.innerHTML = ele.groundName;  
+    //         rate.innerHTML = ele.rating;
+    //         rateCount.innerHTML = ele.ratingCount;          
+
+    //     }
+    // })
+
+
+
+
+    document.querySelector("#booknow_btn").addEventListener("click", ()=>{
+        window.location.href = "bookVenue.html";
+    })
+
+    document.querySelector("#booknow_btn2").addEventListener("click", ()=>{
+        window.location.href = "bookVenue.html";
+    })
+
+
+</script>

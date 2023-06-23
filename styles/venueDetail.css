@@ -1,0 +1,638 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Lato, "Open Sans", sans-serif;
+
+}
+
+
+
+
+
+  /* these style for need help wala div */
+  #needhelp{
+    position: fixed;
+    bottom: 0%;
+    right:10px;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 7px;
+    padding-right: 7px;
+    justify-content: space-between;
+    width:12%;
+    height: 32px;
+    background-color: #568c3e;
+    color: white;
+    font-family: 'lato', sans-serif;
+    line-height: 0%;
+    font-size: 14px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+}
+
+#needhelpiconimage{
+    margin-top: 4%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#header{
+    width: 100%;
+    height: 65px;
+}
+
+  /* Navbar start */
+  #navbar{
+    height: 66px;
+    background-color: #FEFFFE;
+    width: 100%;
+    
+}
+body{
+    margin: auto;
+}
+#logo{ 
+    width: 100px; 
+    height: 45px; 
+    margin-left: -60%;
+}
+
+#pplogo{
+    width: 35px; 
+    height: 35px;
+}
+
+#explorenavbar{
+    display: flex; 
+    padding-top: 10px; 
+    width: 100%;
+    height: 100%; 
+    box-shadow: rgba(0, 0, 0, 0.185) 0px 3px 5px;
+}
+
+#dropdownarrow{
+    width: 12px; 
+    height: 8px;
+    padding-top: 20px; 
+    margin-left: 1%;
+}
+
+#logodiv{
+    margin-left: 9.5%;
+    margin-top: 10px;
+}
+
+#nav2div{
+    margin-left: 67.5%; margin-top: 5px;
+    display: flex; margin-top: 10px;
+}
+
+.loginp{
+    margin-left: 10px; 
+    line-height: 10px;
+    font-size: 14px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #5c5c5c;
+}
+
+#nav2div:hover{
+    cursor: pointer;
+}
+
+/* popup styling */
+
+
+*{
+    box-sizing: border-box;
+}
+
+#modal_container{
+    border: 1px solid green;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+button{
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    padding: 10px 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    background-color: green;
+}
+
+#close{
+    height: 27px;
+    position: absolute;
+    right: 20%;
+    top: 17.5%;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#modal_container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#modal{
+    display: flex;
+    background-color: white;
+    margin-left: -1.5%;
+    margin-top: -7%;
+    border-radius: 5px;
+    width: 59.3%;
+    height: 290px;
+    max-width: 100%;
+}
+
+#login_left_div{
+    width: 40%;
+    background-color: #fdbd51;
+
+}
+
+#login_right_div{
+    width: 48.5%;
+    height: 80%;
+    margin-left: 5%;
+    margin-top: 3.7%;
+    text-align: center;
+    font-family: Lato, sans-serif;
+}
+
+#input{
+    color: #5c5c5c;
+    padding: 0;
+    font-size: 14px;
+    border-bottom: 1px solid rgb(160, 160, 160);
+    border-bottom-width: 50%;
+    border-image: initial;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    padding: 4px;
+    padding-bottom: 8px !important;
+    vertical-align: baseline;
+    text-align: left;
+    width: 100%;
+}
+
+#input::-webkit-outer-spin-button,
+#input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#entermobile{
+    font-size: 16px;
+    line-height: 16px;
+    color: #808080;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+#user_phone_div{
+    margin-bottom: 12px;
+    display: flex;
+}
+
+#sendOTP{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(133, 199, 133);
+
+}
+
+#countryDrop{
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #424242;
+    vertical-align: baseline;
+    margin-left: 10px;
+    width: 9%;
+}
+ 
+
+ /* Navbar End */
+
+
+
+
+
+
+
+
+#gif_div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 65px;
+}
+
+#image_div{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mask {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    padding: 0;
+    z-index: 0;
+    
+}
+
+#blur{
+    height: 100%;
+}
+
+#svgBlur {
+    -webkit-filter: url("#sharpBlur");
+    filter: url("#sharpBlur");
+    width: 100%;
+    height: 100%;
+}
+
+#hideSvg{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+#content {
+    position: absolute;
+    width: 61%;
+    height: 100%;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+#notBlur{
+    width: 100%;
+    height: 100%;
+}
+
+#rate_div{
+    display: flex;
+    margin-bottom: 5.3%;
+}
+
+#different_ratings{
+    width: 10.5%;
+    height: 200px;
+    margin-left: -3.5%;
+    margin-top: 6%;
+    z-index: 3;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#different_ratings.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.rating{
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.rating:hover{
+    cursor: pointer;
+}
+.box{
+    width: 95px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px 3px;
+    margin-right: 20px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star{
+    box-sizing: border-box;
+    background: white;
+    border-radius: 50%;
+    width: 25%;
+    height: 30px;
+
+}
+#booknow_div{
+    position: absolute;
+    box-sizing: border-box;
+    width: 33.5%;
+    height: 61.5%;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px;
+    top: 18%;
+    left: 8%;
+    font-family: Lato, "Open Sans", sans-serif;
+    z-index: 2;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+
+}
+
+#booknow_btn{
+    width: 86%;
+    min-width: 357px;
+    max-width: 510px;
+    height: 55px;
+    padding: 0;
+    background-color: #558b2f;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-family: Lato, "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2%;
+
+}
+
+#main_div{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 24px;
+    display: flex;
+    gap: 2%;
+}
+
+#left_div{
+    width: 70%;
+}
+
+#right_div{
+    width: 28%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+#safehygiene{
+    box-sizing: border-box;
+    border: 0.5px solid gray;
+    width: 100%;
+    height: 125px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.greendivtop{
+    width: 126px;
+    height: 5px;
+    background-color: #558b2f;
+    position: absolute;
+    right: 32.1%;
+    border-top-right-radius: 10px;
+
+}
+
+.greendivbottom{
+    width: 126px;
+    height: 5px;
+    background-color: #558b2f;
+    position: absolute;
+    bottom: -12.5%;
+    border-bottom-left-radius: 10px;
+}
+
+#secondDiv{
+    display: flex;
+    letter-spacing: 1px;
+}
+
+#secondDiv div{
+    width: 100px;
+    text-align: center;
+}
+
+.text{
+    margin: 0;
+    padding: 0;
+    font-family: Lato, "Open Sans", sans-serif;
+    color: #424242;
+    font-size: 11px;
+}
+
+.safeicon{
+    position: relative;
+    width: 35%;
+    margin-left: 0%;
+}
+
+#sportsavailable{
+    border: 0.5px solid rgb(128,128,128, 0.5);
+    width: 100%;
+    height: 132px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    font-family: Lato, "Open-sans", sans-serif;
+    font-weight: thiner;
+    font-size: 12px;
+    color: #424242;
+    letter-spacing: 0.5px;
+    
+}
+
+#additionalinfo{
+    border: 0.5px solid rgb(128,128,128, 0.5);
+    width: 100%;
+    height: 195px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    font-family: Lato, "Open-sans", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px;
+    color: #424242;
+    letter-spacing: 0.5px;
+
+}
+
+#amenities{
+    border: 0.5px solid rgb(128,128,128, 0.5);
+    width: 100%;
+    height: 207px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+#amenties_text{
+    border-bottom: 0.5px solid rgb(99, 93, 93, 0.5);
+    color: #558b2f;
+    font-size: 15px;
+    font-weight: 400;
+    width: 96%;
+    margin-left: 2%;
+    text-align: left;
+}
+
+#grid_text{
+    width: 95%;
+    margin: auto;
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_text_item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.check{
+    width: 8%;
+    height: 45%;
+
+}
+
+#relatedto{
+    border: 0.5px solid rgb(128,128,128, 0.5);
+    width: 100%;
+    height: 83px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+p{
+    font-family: Lato, "Open Sans", sans-serif;
+}
+#relatedto_text{
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #939393;
+}
+
+#timing{
+    box-sizing: border-box;
+    padding-top: 22px;
+    width: 100%;
+    height: 95px;
+    margin-bottom: 23px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#time_duration, 
+#address{
+    width: 88%;
+    margin: auto;
+    font-size: 15px;
+    font-family: Lato, "Open Sans", sans-serif;
+    font-weight: 300;
+    color: #424242;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+
+
+#location{
+    box-sizing: border-box;
+    padding-top: 20px;
+    border-radius: 4px;
+    width: 100%;
+    height: 385px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-bottom: 24px;
+}
+
+#map_div{
+    width: 88%;
+    margin: auto;
+    height: 220px;
+
+}
+
+#share_btn{
+    width: 100%;
+    height: 55px;
+    padding: 0;
+    background-color: white;
+    border-radius: 4px;
+    border: none;
+    color: black;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+    font-family: Lato, "Open Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#booknow_btn2{
+    width: 97%;
+    min-width: 357px;
+    /* max-width: 510px; */
+    height: 50px;
+    padding: 0;
+    background-color: #558b2f;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-family: Lato, "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+
+    
+
+}
+
+
+
+#footer{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}

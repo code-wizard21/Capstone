@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  /* padding: 20px; */
+  border: 1px solid #888;
+  
+    width: 60%;
+  
+    /* margin-top: 100px; */
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float:right;
+  padding-right: 5px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#contbox{display: flex;}
+#form{margin-left: 20px; width: 100%;}
+#mobno{    margin-left: 150px;
+    padding-top: 30px;
+}
+#mobnum:focus{outline: none;}
+#otp{margin-left: 200px; padding-top: 30px;}
+#otpnum:focus{outline: none;}
+#mobnum{width: 350px; margin-left: 2%;border: hidden; height: 30px;}
+#otpnum{width: 450px; height: 30px; padding-left: 15%; margin-top: 12px; border: hidden;}
+#indlogo{display: inline; margin-top: 5%;}
+.bbtn{width: 100%; height: 13%;}

@@ -1,0 +1,144 @@
+/* div for navbar */
+#navbar {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #212121;
+}
+#imgdiv {
+  width: 10%;
+  height: 90%;
+  margin-top: 0.5%;
+  margin-left: 7%;
+  border: 1px solid transparent;
+}
+
+#tabsdiv {
+  display: flex;
+  width: 20%;
+  height: 60%;
+  margin-left: 55%;
+  margin-top: 1%;
+  border: 1px solid transparent;
+  justify-content: space-around;
+  color: white;
+  font-family: "lato", sans-serif;
+  font-size: 16px;
+}
+
+/* div for middle body part */
+#mainbody {
+  margin: auto;
+  display: flex;
+  width: 90%;
+  height: 700px;
+}
+/* style for left side info address and phone num */
+#left {
+  width: 50%;
+  height: 90%;
+  margin-top: 5%;
+}
+/* style for right side form */
+.right {
+  width: 50%;
+  height: 90%;
+  margin-top: 5%;
+}
+/* inner div styles of the left side div */
+#touch {
+  width: 100%;
+  height: 12%;
+}
+#info1 {
+  width: 100%;
+  height: 15%;
+}
+.info2 {
+  width: 100%;
+  height: 20%;
+}
+#ourmail {
+  width: 100%;
+  height: 10%;
+}
+.ind {
+  line-height: 0;
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+#que {
+  line-height: 30px;
+  font-size: 13px;
+  color: rgb(187, 184, 184);
+  font-family: Lato, sans-serif;
+}
+.map {
+  display: flex;
+  color: rgb(128, 128, 128);
+}
+.address {
+  display: flex;
+  color: rgb(128, 128, 128);
+}
+.phone {
+  display: flex;
+  color: rgb(128, 128, 128);
+}
+.stuff {
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 0;
+  font-family: Lato, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+}
+#ourmail {
+  display: flex;
+  color: rgb(128, 128, 128);
+}
+img {
+  margin-top: 6px;
+}
+/* these is style for div right side user info form */
+#userinfo {
+  width: 80%;
+  height: 80%;
+  padding-left: 5%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: auto;
+  border: 1px solid transparent;
+  /* position: relative; */
+}
+#formhead {
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  /* position: absolute; */
+}
+input {
+  width: 90%;
+  height: 7%;
+  margin-top: 5%;
+  border: 1px solid rgb(226, 225, 225);
+}
+textarea {
+  width: 90%;
+  height: 20%;
+  margin-top: 5%;
+  border: 1px solid rgb(226, 225, 225);
+}
+button {
+  width: 91%;
+  height: 8%;
+  background-color: #ffc107;
+  border: none;
+  color: white;
+  margin-top: 5%;
+}
+
+#uuemial {
+  height: 35px;
+}

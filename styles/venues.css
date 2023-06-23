@@ -1,0 +1,418 @@
+
+    #input{
+        box-sizing: border-box;
+    }
+    
+    body{
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    /* Navbar start */
+    #navbar{
+        height: 66px;
+        background-color: #FEFFFE;
+        width: 100%;
+        
+    }
+    body{
+        margin: auto;
+    }
+    #logo{ 
+        width: 100px; 
+        height: 45px; 
+        margin-left: -60%;
+    }
+    
+    #pplogo{
+        width: 35px; 
+        height: 35px;
+    }
+    
+    #explorenavbar{
+        display: flex; 
+        padding-top: 10px; 
+        width: 100%;
+        height: 100%; 
+        box-shadow: rgba(0, 0, 0, 0.185) 0px 3px 5px;
+    }
+    
+    #dropdownarrow{
+        width: 12px; 
+        height: 8px;
+        padding-top: 20px; 
+        margin-left: 1%;
+    }
+    
+    #logodiv{
+        margin-left: 9.5%;
+        margin-top: 10px;
+    }
+    
+    #nav2div{
+        margin-left: 67.5%; margin-top: 5px;
+        display: flex; margin-top: 10px;
+    }
+    
+    .loginp{
+        margin-left: 10px; 
+        line-height: 10px;
+        font-size: 14px; 
+        font-family: Arial, Helvetica, sans-serif; 
+        color: #5c5c5c;
+    }
+
+    #nav2div:hover{
+        cursor: pointer;
+    }
+
+    /* popup styling */
+
+    
+    *{
+        box-sizing: border-box;
+    }
+    
+    #modal_container{
+        border: 1px solid green;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    button{
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        padding: 10px 25px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        background-color: green;
+    }
+    
+    #close{
+        height: 27px;
+        position: absolute;
+        right: 20%;
+        top: 17.5%;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    #modal_container.show{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    #modal{
+        display: flex;
+        background-color: white;
+        margin-left: -1.5%;
+        margin-top: -7%;
+        border-radius: 5px;
+        width: 59.3%;
+        height: 290px;
+        max-width: 100%;
+    }
+    
+    #login_left_div{
+        width: 40%;
+        background-color: #fdbd51;
+    
+    }
+
+    #login_right_div{
+        width: 48.5%;
+        height: 80%;
+        margin-left: 5%;
+        margin-top: 3.7%;
+        text-align: center;
+        font-family: Lato, sans-serif;
+    }
+    
+    #input{
+        color: #5c5c5c;
+        padding: 0;
+        font-size: 14px;
+        border-bottom: 1px solid rgb(160, 160, 160);
+        border-bottom-width: 50%;
+        border-image: initial;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+        padding: 4px;
+        padding-bottom: 8px !important;
+        vertical-align: baseline;
+        text-align: left;
+        width: 100%;
+    }
+    
+    #input::-webkit-outer-spin-button,
+    #input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    
+    #entermobile{
+        font-size: 16px;
+        line-height: 16px;
+        color: #808080;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+    
+    #user_phone_div{
+        margin-bottom: 12px;
+        display: flex;
+    }
+    
+    #sendOTP{
+        width: 100%;
+        height: 20%;
+        background-color: rgb(133, 199, 133);
+    
+    }
+    
+    #countryDrop{
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        color: #424242;
+        vertical-align: baseline;
+        margin-left: 10px;
+        width: 9%;
+    }
+     
+
+     /* Navbar End */
+
+/* Main body start */
+
+     #main{
+        background-image: url("https://playo-website.gumlet.net/booking/bg-venues.png?auto=format,compress");
+        min-height: 111vh;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        width: 100%;
+        z-index: -1;
+        background-size: 100%;
+      
+     }
+
+     /* Headline start */
+     .text-headline{
+         height: 46px;
+         z-index: 5;
+         margin-top: 119px;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .text-headline > span:nth-child(1){
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 36px;
+        letter-spacing: 0.5px;
+        line-height: 46.8px;
+        color: white;
+        margin-right: 7px;
+        font-weight: 300;
+     } 
+     .text-headline > span:nth-child(2){
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 36px;
+        letter-spacing: 0.5px;
+        line-height: 46.8px;
+        color: #ffff00;
+        margin-right: 7px;
+        font-weight: 700;
+        font-style: italic;
+        
+    } 
+    .text-headline > span:nth-child(3){
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 36px;
+        letter-spacing: 0.5px;
+        line-height: 46.8px;
+        color: white;
+        font-weight: 300;
+    } 
+
+    /* Headline End */
+    
+
+    /* Input div start */
+
+    .input-div{
+        margin-top: 32px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Input box */
+    #search{
+        height: 50px;
+        width: 50%;
+        padding-left: 49px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-radius: 2px;
+        border: none;
+        box-sizing: border-box;
+        color: #2A2E37;
+    }
+
+    #search::placeholder{
+        color: #E9E0E4;
+        
+    }
+
+    #search:focus{
+        outline: none;
+    }
+
+    /* Search Icon */
+    .search-icon{
+        position: absolute;
+        width: 17px;
+        left: 26%;
+        top: 16px;
+       
+    }
+
+    /* Search Location */
+    .find-me{
+        position: absolute;
+        width: 16px;
+        right: 32.5%;
+        top: 16.5px;
+        cursor: pointer;
+    }
+
+    /* Locate me text */
+    .locate-me-text{
+        position: absolute;
+        font-family: "Lato", "Open Sans", sans-serif;
+        line-height: normal;
+        letter-spacing: 0.5px;
+        font-size: 15px;
+        color: #939393;
+        right: 27%;
+        cursor: pointer;
+    }
+
+
+    /* Input div End*/
+
+
+
+/* Main body End */
+
+
+
+/* Append Search Results Div start */
+
+    #show-results-div{
+        max-height: 260px;
+        background-color: #FFFFFF;
+        width: 50%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        overflow: scroll;
+        visibility: hidden;
+       
+    }
+
+    #show-results-div::-webkit-scrollbar { width: 0 !important }
+
+    #show-results-div>div{
+        height: 50px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 15px;
+    }
+
+    #show-results-div>div>img{
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+    }
+
+    #show-results-div>div>span:nth-child(2){
+        font-family: "Lato", "Open Sans", sans-serif;
+        color: #424242;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        margin-right: 5px;
+    }
+
+    #show-results-div>div>span:nth-child(3){
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        margin-top: 4px;
+        border: 1px solid transparent;
+        height: 17px;
+        overflow: hidden;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+
+/* Append Search Results Div End */
+
+
+
+/* Media Queries */
+
+/* 
+@media only screen and (min-width: 377px) and (max-width:769px){
+    #main{
+        min-height: 100vh;
+    }
+} */
+
+
+
+  /* these style for need help wala div */
+  #needhelp{
+    position: fixed;
+    bottom: 0%;
+    right:10px;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 7px;
+    padding-right: 7px;
+    justify-content: space-between;
+    width:12%;
+    height: 32px;
+    background-color: #568c3e;
+    color: white;
+    font-family: 'lato', sans-serif;
+    line-height: 0%;
+    font-size: 14px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+}
+
+#needhelpiconimage{
+    margin-top: 4%;
+}

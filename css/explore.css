@@ -1,0 +1,41 @@
+
+body{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+#typesearch:focus{
+   outline: none;
+}
+
+
+#searchbtn:hover{
+   background-color: rgb(235, 235, 235);
+   cursor: pointer;
+}
+
+
+
+#logo{ width: 100px; height: 45px; margin-left: 10px;}
+#pplogo{width: 35px; height: 35px;}
+#explorenavbar{display: flex; padding-top: 10px; height: 40px; box-shadow: rgba(0, 0, 0, 0.185) 0px 3px 5px;
+; }
+#dropdownarrow{width: 12px; height: 8px;padding-top: 20px; margin-left: 1%;
+
+}
+#logodiv{margin-left: 10%;}
+#nav2div{margin-left: 60%;}
+.loginp{margin-left: 10px; line-height: 10px;font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #5c5c5c;}
+#typesearch{width: 100%; padding-left: 10px;}
+#searchbtn{ border: 1px solid rgb(124, 122, 122) ; background-color: white;}
+#citynames{border: 1px solid rgb(124, 122, 122); width: 65%; margin: auto;
+height: 400px; overflow-y: scroll; margin-top: 10px; border: none;
+margin-right: 20%;}
+#searchbar{ justify-content: space-between;
+   display: flex;
+   border-radius: 1px;
+   margin-left: 15%; width: 65%; height: 40px; margin-top: 15px;}
+#dropdowndiv{ height: 70px; visibility: hidden; 
+   width: 100px; text-align: center; margin-top: 40px; border: 1px solid bisque;}
+#citynames>p{padding-left: 10px;}

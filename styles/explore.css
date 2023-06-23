@@ -1,0 +1,203 @@
+#con {
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  width: 64%;
+  margin: auto;
+  grid-gap: 30px 50px;
+  border: 1px solid transparent;
+  margin-bottom: 50px;
+  border: 1px solid transparent;
+}
+
+
+
+
+
+
+
+
+
+#places {
+  height: 340px;
+  border: 1px solid transparent;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.conimage {
+  height: 40%;
+  width: 100%;
+  border-radius: 5px;
+}
+.imgtext {
+  color: white;
+  position: absolute;
+  margin-left: 10px;
+  padding-bottom: 0px;
+  font-size: 20px;
+  transform: translateY(-50px);
+  font-family: 'lato', sans-serif;
+}
+.highlighttext {
+  font-weight: bold;
+  font-size: 15px;
+  font-family: 'lato',sans-serif;
+  line-height: 0%;
+  margin-left: 4%;
+ margin-top: 25px;
+}
+.location {
+  color: grey;
+  font-family: 'lato',sans-serif;
+  font-size: 13px;
+  margin-left: 4%;
+  
+}
+.clockicon {
+  height: 30px;
+  transform: translateY(10px);
+  margin-right: 10px;
+}
+.coaching {
+  text-align: center;
+  text-transform: lowercase;
+  color: rgb(179, 178, 178);
+  font-family: 'lato', sans-serif;
+  font-size: 15px;
+}
+.timing {
+  margin-top: 20px;
+  margin-left: 3%;
+  font-size: 15px;
+  line-height: 0%;
+  font-family: 'lato',sans-serif;
+  
+}
+#filter {
+  border: 1px solid rgb(221, 221, 221);
+  width: 64%;
+  height: 70px;
+  margin: auto;
+ display: flex;
+ margin-top: 1%;
+ border-radius: 10px;
+  margin-bottom: 40px;
+  font-family: 'lato', sans-serif;
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+}
+
+
+/* location filter */
+#locationfilter{
+  display: flex;
+  width:22%;
+  padding-left: 1%;
+  padding-right: 1%;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-right: 1px solid rgb(223, 221, 221);
+}
+.icon {
+  height: 25px;
+  transform: translateY(18px);
+  margin-right: 6px;
+}
+.bold {
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-right: 30px;
+  margin-top: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.icon2 {
+  height: 15px;
+  transform: translateY(30px);
+  margin-right: 8px;
+  
+ 
+}
+#searchicon{
+display: flex;
+ border: 1px solid transparent;
+ margin-left: 20px;
+
+
+ color: grey;
+}
+.filtertext{
+ font-size: 16px;
+ cursor: pointer;
+}
+.align{
+ line-height: 3px;
+}
+
+
+/* search filter */
+#searchfilter,#sportsfilter,#catfilter{
+ display: flex;
+ width:26%;
+ border: 1px solid transparent;
+ padding-left: 2%;
+  padding-right: 1%;
+  box-sizing: border-box;
+  border-right: 1px solid rgb(223, 221, 221);
+}
+.shade{
+ color: rgb(190, 189, 189);
+
+}
+.space{
+ padding-right: 50px;
+ border: transparent;
+ transform: translateY(-10px);
+}
+.space1{
+ padding-right: 20px;
+ border: transparent;
+ transform: translateY(-10px);
+}
+
+
+
+
+@media only screen and (min-width: 376px) and (max-width: 768px){
+  #con {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #filter{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+
+  }
+
+  #detect, .icon2, .shade{
+    visibility: hidden;
+
+  }
+
+  #locationfilter, #searchfilter, #sportfilter, #catfilter{
+    border: none;
+  }
+  
+
+  
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 375px){
+  #filter{
+    visibility: hidden;
+  }
+  #con {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

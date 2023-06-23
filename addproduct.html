@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/addproduct.css">
+  </head>
+  <body>
+      <div id="titlebar">ADMIN PAGE</div>
+    <!-- to add items into the server. -->
+    <div id="main">
+      <div id="add">
+        <input type="img" placeholder="img" id="image" />
+        <input type="text" placeholder="city name" id="city" />
+        <input type="text" placeholder="name" id="name" required />
+        <input
+          type="text"
+          placeholder="location name"
+          id="location-name"
+          required
+        />
+        <input type="text" placeholder="timing" id="timing" />
+        <input type="text" placeholder="image2" id="image2" />
+        <input type="text" placeholder="overview" id="overview" />
+        <input type="text" placeholder="goals" id="goals" />
+        <input type="text" placeholder="services" id="services" />
+        <input type="text" placeholder="infrastructure" id="infra" />
+        <input type="text" placeholder="address" id="address" />
+        <!-- <input type="number" placeholder="id" id="id" required> -->
+        <br><br><br>
+        <button onclick="addproduct()" id="addbtn">Add Data</button>
+
+      </div>
+      
+      <!-- to update the server -->
+      <div id="update">
+        <input type="number" placeholder="id" id="id" required/>
+        <input type="img" placeholder="img" id="uimage" />
+        <input type="text" placeholder="city name" id="ucity" />
+        <input type="text" placeholder="name" id="uname" required />
+        <input
+          type="text"
+          placeholder="location name"
+          id="ulocation-name"
+          required
+        />
+        <input type="text" placeholder="timing" id="utiming"  />
+        <input type="text" placeholder="image2" id="uimage2" />
+        <input type="text" placeholder="overview" id="uoverview" />
+        <input type="text" placeholder="goals" id="ugoals" />
+        <input type="text" placeholder="services" id="uservices" />
+        <input type="text" placeholder="infrastructure" id="uinfra" />
+        <input type="text" placeholder="address" id="uaddress" />
+        <!-- <input type="number" placeholder="id" id="id" required> -->
+        <br><br>
+        <button onclick="update()">Update Data</button>
+      </div>
+    </div>
+
+    <div id="con"></div>
+    <br /><br />
+
+    <!-- use this input to go to explore.html -->
+    <!-- <div>
+      <input
+        type="text"
+        id="cities"
+        placeholder="type the city name"
+        required
+      />
+      <button onclick="city()">Detect</button>
+    </div> -->
+  </body>
+</html>
+<script>
+  let con = document.getElementById("con");
+  async function add() {
+    try {
+      let url = `http://127.0.0.1:5000/playo/cities`;
+
+      let response = await fetch(url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("d:", d);
+      display(d);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  display = (e) => {
+    //  console.log('e:', e)
+    e.forEach((el) => {
+      let div = document.createElement("div");
+      let location = document.createElement("p");
+      let name = document.createElement("p");
+      location.innerText = el.location;
+      name.innerText = el.name;
+      (Book = "BOOKABLE"), (safe = "Safe & Hygiene");
+      div.append(location, name, Book, safe);
+      con.append(div);
+    });
+  };
+
+  async function addproduct() {
+    try {
+      let data = {
+        city: document.getElementById("city").value,
+        name: document.getElementById("name").value,
+        location: document.getElementById("location-name").value,
+        image: document.getElementById("image").value,
+        timing: document.getElementById("timing").value,
+        image2: document.getElementById("image2").value,
+        overview: document.getElementById("overview").value,
+        goals: document.getElementById("goals").value,
+        services: document.getElementById("services").value,
+        infrastructure: document.getElementById("infra").value,
+        address: document.getElementById("address").value,
+        // id: document.getElementById("id").value,
+      };
+
+      data = JSON.stringify(data);
+
+      let response = await fetch("http://127.0.0.1:5000/playo/cities", {
+        method: "POST",
+        body: data,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      let d = await response.json();
+      console.log("d:", d);
+      alert("New data added to the server")
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  
+  
+  
+  // update data function
+
+  async function update() {
+    try {
+      let update = {
+        city: document.getElementById("ucity").value,
+        name: document.getElementById("uname").value,
+        location: document.getElementById("ulocation-name").value,
+        image: document.getElementById("uimage").value,
+        timing: document.getElementById("utiming").value,
+        image2: document.getElementById("uimage2").value,
+        overview: document.getElementById("uoverview").value,
+        goals: document.getElementById("ugoals").value,
+        services: document.getElementById("uservices").value,
+        infrastructure: document.getElementById("uinfra").value,
+        address: document.getElementById("uaddress").value,
+      };
+      let id = document.getElementById("id").value;
+      let response = await fetch(`http://127.0.0.1:5000/playo/cities/${id}`, {
+        method: "PUT",
+
+        body: JSON.stringify(update),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let d = await response.json();
+      console.log("d:", d);
+      alert("data updated to the server")
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  // activity
+  function city() {
+    // let c= document.getElementById("cities").value
+    // console.log(c)
+
+    let data = {
+      city: document.getElementById("cities").value,
+    };
+
+    let location = localStorage.setItem("name", JSON.stringify(data));
+    window.location.href = "explore.html";
+  }
+</script>

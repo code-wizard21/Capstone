@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playo: Venues</title>
+    <!-- Own CSSS Link -->
+    <link rel="stylesheet" href="./styles/venues.css">
+
+    <!-- Link Headers css -->
+
+    <!-- Link Footer Css -->
+    <link rel="stylesheet" href="./styles/footer.css">
+
+    <!-- LINK FOR Lato font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div id="main" >
+
+        <!-- navbar start -->
+        <div id="navbar">
+            <div id="explorenavbar">
+
+                <div id="logodiv" >
+                    <img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo">
+                </div>
+        
+                <div id="nav2div"> 
+                    <img id="pplogo" src="https://playo-website.gumlet.net/playo_functional/Icons/user_blank.svg" alt="">
+                    <p id="myBtn" class="loginp">Login/Signup</p>
+                    <img id="dropdownarrow" src="https://playo-website.gumlet.net/playo_functional/Icons/arrow_light.svg" alt="arrow">
+                </div>
+        
+               
+        
+                <!--    popupwindow -->
+                <div id="modal_container">
+        
+                    <div id="modal">
+                        <img id="close" src="https://playo-website.gumlet.net/playo_functional/Icons/closeButton.svg" alt="">
+        
+                        <div id="login_left_div">
+                            <img width="100%" src="https://playo-website.gumlet.net/icons/login-graphics.png?auto=compress,format" alt="">
+                        </div>
+                        <div id="login_right_div">
+                            <p id="entermobile">Enter Your Mobile Number</p>
+        
+                            <div id="user_phone_div">
+                                <div>
+                                    <div id="countrySpan">
+                                        <span>
+                                            <div id="selectCallingCode">
+                                                <span style="font-size: 14px; color: #424242;" id="rem1">IND</span>
+                                                <span style="font-size: 14px; color: #424242;" id="rem2">+91</span>
+                                                <img id="countryDrop" src="https://s3.ap-south-1.amazonaws.com/playo-website/booking/selectCountry.svg" alt="dropdown">
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <span>
+                                    <input id="input" type="number" placeholder="Mobile Number *" value="">
+                                    <hr style="margin-top: -1px; margin-left: -65%; width: 220%;">
+                                </span>
+                                
+                            </div>
+        
+                            <button id="sendOTP" style="font-size: 1em;">SEND OTP</button>
+                            <button id="giveOTP"  style="font-size: 1em;" >Enter OTP</button>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <!-- navbar ends -->
+
+        <div class="text-headline">
+
+            <span>Ready to find</span>
+            <span>Sports venue</span>
+            <span>around you?</span>
+
+        </div>
+        <div class="input-div">
+            <input type="text" name="" id="search" placeholder="Search for cities, places..." oninput="debouncingFunction(fetchFunction, 1000 )">
+            <img src="https://playo-website.gumlet.net/venues-listing/search.svg" class="search-icon" alt="">
+            <img src="https://playo-website.gumlet.net/venues-listing/cross_hair.svg" class="find-me" alt="">
+            <p class="locate-me-text">Locate me</p>
+        </div>
+        <div id="show-results-div">
+
+
+            <!-- <div>
+                <img src="data:image/jpeg;base64,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" alt="">
+                <span>Bangalore</span>
+                <span>College square play  ipsum! errorlorem15 sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laboriosam sed non doloremque natus mollitia.</span>
+            </div>
+
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> -->
+
+
+        </div>
+
+    </div>
+
+    <div id="footer" >
+        <div id="infooter">
+            <div id="div1">
+                <div id="weblogo">
+                    <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
+                </div>
+                <div id="playstore">
+                    <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
+                        <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
+                    </a>
+                    <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
+                        <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
+                    </a>
+                </div>
+                <div id="copyright">
+                    <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
+                </div>
+                <div id="loweritems">
+                    <a href="faq.html"><p>FAQs</p></a>
+                    <a href=""><p>Privacy POlicy</p></a>
+                    <a href=""><p>Terms Of Service</p></a>
+                    <a href=""><p>Cancellation & Refund Policy</p></a>
+                    <a href=""><p>Careers</p></a>
+                    <a href=""><p id="hiring">We're Hiring!</p></a>
+                </div>
+            </div>
+            <div id="div2">
+                <a href="about.html"><p>About Us</p></a>
+                <a href="partner.html"><p>Partner With Us</p></a>
+                <a href="brandact.html"><p>Brand Activations</p></a>
+                <a href="corporate.html"><p>Corporate Offerings</p></a>
+                <a href="contact.html"><p>contact Us</p></a>
+            </div>
+            <div id="div3">
+                <a href="venues.html"><p>Book Venues</p></a>
+                <a href="activities.html"><p>Activities</p></a>
+                <a href="blog.html"><p>Blog</p></a>
+                <a href="faq.html"><p>FAQ's</p></a>
+            </div>
+            <div id="div4">
+                <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
+                <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
+                <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
+                <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- need help button div -->
+      <a href="contact.html">
+        <div id="needhelp">
+            <p>Need help?</p>
+            <img id="needhelpiconimage" src="https://playo-website.gumlet.net/venues-listing/maximize.svg" width="10%" height="60%">
+        </div>
+    </a>
+
+
+
+</body>
+</html>
+<!-- Link Script tag -->
+<script src="./scripts/venues.js" >
+
+    
+
+</script>
+

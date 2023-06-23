@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/navbarblack.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="mynavbar"></div>
+    <!-- these div for about us block -->
+    <div id="about_block">
+        <div id="aboutus">
+            <p id="abt">ABOUT US</p>
+        </div>
+        <div id="aboutus_sub">
+            <p id="abt_sub">Playo is the leading One-Stop Sports App to help bring back Play in everyday lives. We empower <br>
+                local communities to make new playpals, organize playgroups, share information/experiences<br>
+                 and discover sporting venues/activities. So, no more excuses now...don your sneakers and be a <br>
+                Playoholic!
+            </p>
+        </div>
+    </div>
+
+    <!-- these div for ourstory block -->
+    <div id="ourstory">
+        <!-- these div for left side stuff -->
+        <div id="leftourstory">
+            <div id="upperimage">
+                <p id="ourstorytitle">OUR STORY</p>
+                <img src="https://playo-website.gumlet.net/company/images/about-us-04.svg">
+                <img src="https://playo-website.gumlet.net/company/images/ourstory-image-bg.png">
+            </div>
+            <div id="lowertext">
+                <p class="ourstorytext">
+                    This fairytale, like all fairytales, started with a few dudes in distress. One was lamenting his dear departed tennis partner,<br>
+                    the second grieving for the badminton racquet left behind, the third desolate after another football weekend that never<br>
+                    happened, the fourth broke and gymless from another membership waylaid, and the fifth just #bored to death. Alas, unlike<br>
+                    in other fairytales, no fair damsel came to their rescue and they wallowed for a while in their sorrow. And so they finally<br>
+                    did what all forsaken souls do...start building their very own Neverland, a place for all restless adrenaline junkies like<br>
+                    themselves...and thus a thought, nay a belief called Playo was sown.
+                </p>
+            </div>
+        </div>
+        <!-- these div for right side image only -->
+        <div id="rightourstory">
+            <img src="https://playo-website.gumlet.net/company/images/story1.png?auto=compress,format" width="100%" height="100%">
+        </div>
+    </div>
+
+    <!-- these div for our story second image wala div -->
+    <div id="ourstorysecond">
+        <div id="oursecondimg">
+            <img src="https://playo-website.gumlet.net/company/images/story2.png?auto=compress,format" width="70%" height="100%">
+        </div>
+        <div class="oursecondtext">
+            <p class="ourstorytext">
+                A belief to create a playground where you can fit-in with other fellow misfits, where access is not limited by narrow<br>
+                memberships walls. A belief that you can play when you want...where you want...how you want, and not have to suffer the<br>
+                agony of wait. A belief to create a world where you can lose yourself and yet rediscover yourself, where you can be both the victor and the vanquished and laugh at being both.<br>
+                 A belief...that happiness is a dish best served on the field.
+            </p>
+        </div>
+    </div>
+
+    <!-- these div for remaining text of ourstory -->
+    <div id="ourstorylast">
+        <p class="ourstorytext">
+            We warmly welcome you to Playo, your singular destination for sports, fitness, fun and all things recreational. Come, relive those cherished childhood moments when you <br>
+            high fives or wept as one for a loss. Time to get your lovable varsity jersey out and give your neighbour a shout or go challenge your colleague...better still make a new.<br>
+            Addicted to Play...and create your own happily ever after!
+        </p>
+    </div>
+
+    <!-- these div for footer -->
+    <div id="footer"></div>
+</body>
+</html>
+
+<script  type="module">
+    let foot= document.getElementById("footer");
+
+    import footer from "./components/footer.js";
+
+    foot.innerHTML= footer();
+
+
+    let headr= document.getElementById("mynavbar");
+    import navbar from "./components/navbarblack.js";
+    headr.innerHTML= navbar();
+</script>

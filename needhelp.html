@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/needhelp.css">
+</head>
+<body>
+
+<!-- <button class="open-button" onclick="openForm()">Need help?</button> -->
+
+        <!-- <img class="open-button" id="help" onclick="openForm()" src="https://i.ibb.co/SBqqN6z/help.png" alt=""> -->
+        <img class="open-button" id="help" onclick="openForm()" src="https://i.ibb.co/m5tL66Y/help2.png" alt="">
+
+
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <div>
+      <img  onclick="closeForm()" src="https://i.ibb.co/j6PWY85/minus2.png" alt="">
+    </div>
+
+ <label for="msg">Yourname (optional)</label>
+ <input type="text" required name="" id="">
+ <label for="msg" >Email Address</label>
+ <input required type="email">
+
+
+    <label for="msg"><b>How can we help you?</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>

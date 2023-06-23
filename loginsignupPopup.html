@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/loginsignupPopup.css">
+    <title>login signup Popup</title>
+</head>
+<body>
+    <button id="open">
+        click me please
+    </button>
+
+    <div id="modal_container">
+
+        <div id="modal">
+            <img id="close" src="https://playo-website.gumlet.net/playo_functional/Icons/closeButton.svg" alt="">
+
+            <div id="login_left_div">
+                <img width="100%" src="https://playo-website.gumlet.net/icons/login-graphics.png?auto=compress,format" alt="">
+            </div>
+            <div id="login_right_div">
+                <p id="entermobile">Enter Your Mobile Number</p>
+
+                <div class="user_phone_div">
+                    <div>
+                        <div class="countrySpan">
+                            <span>
+                                <div class="selectCallingCode">
+                                    <span class="alpha3Code">IND</span>
+                                    <span class="callingCode">+91</span>
+                                    <img class="countryDrop" src="https://s3.ap-south-1.amazonaws.com/playo-website/booking/selectCountry.svg" alt="dropdown">
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="sc-htpNat djjRJa">
+                        <input class="user_phone_input sc-bwzfXH ettcJE" type="number" placeholder="Mobile Number *" value="">
+                        <hr class="sc-bxivhb iAJoKA">
+                    </span>
+                </div>
+
+
+                <button class="sc-bdVaJa gBYppX" disabled="" style="font-size: 1em;">SEND OTP</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const open = document.getElementById("open");
+    const modal_container = document.getElementById("modal_container");
+    const close = document.getElementById("close");
+
+    open.addEventListener("click", ()=>{
+        modal_container.classList.add("show")
+    })
+
+    close.addEventListener("click", ()=>{
+        modal_container.classList.remove("show")
+    })
+    
+    $(document).ready(function () {
+       $("#<%=#open.ClientID%>").click(function () {
+           $("#modal_container").slideDown(5000);
+       });
+   });
+
+</script>

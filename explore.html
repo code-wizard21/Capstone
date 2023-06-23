@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/explore.css">
+    <link rel="stylesheet" href="./styles/popup.css">
+    <link rel="stylesheet" href="./styles/activity.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+  </head>
+ 
+  <body>
+    <div id="main">
+      
+      <!-- Navbar start -->
+      <div id="explorenavbar" style="height: 50px; margin-bottom: 35px;">
+        
+        <div id="logodiv" >
+          <a href="index.html">
+            <img id="logo" src="https://playo-website.imgix.net/company/logo1.png?auto=compress,format" alt="playo logo" style="margin-top: 7px;">
+          </a>
+         
+        </div>
+    
+      </div>
+      <!-- Navbar End -->
+
+
+      <div id="filter">
+        <div id="locationfilter">
+          <img src="https://playov2.gumlet.net//explore/Group+3539%402x.png" alt="" class="icon" />
+          <div class="align">
+            <P class="filtertext">Location</P>
+            
+            <span id="place"></span>
+          </div>
+          <div id="searchicon">
+            <img src="https://playov2.gumlet.net//explore/location_search@2x.png" alt="" class="icon2" />
+               <P style="transform: translateY(15px);" id="detect">Detect</P>
+          </div>
+        </div>
+        <div id="searchfilter">
+          <img src="https://playov2.gumlet.net//explore/search-24px@2x.png" alt="" class="icon">
+          <div class="align">
+            <p class="filtertext">Search</p>
+            <p class="shade filtertext"> For example,"Football"</p>
+
+          </div>
+        </div>
+        <div id="sportsfilter">
+          <img src="https://playov2.gumlet.net//explore/Group+18%402x.png" alt="" class="icon" >
+          <div class="align">
+            <p class="filtertext">Sport</p>
+            <select class="bold space">
+              <option value="Select Sports">Select Sports</option>
+              </select>
+             </div>
+          
+        </div>
+        <div id="catfilter">
+          <img src="https://playov2.gumlet.net//explore/menu_vs_outlined@2x.png" alt="" class="icon">
+          <div class="align">
+            <p class="filtertext">Categories</p>
+            <select class="bold space1">
+              <option value="Select Sports">All</option>
+              </select>
+          </div>
+        </div>
+      </div>
+      <div id="con"></div>
+      <!-- <div id= "places">
+        <div>
+          <img src="https://playo-activities.gumlet.io/SVMBOWLINGALLEY/SVMBowlingAlleycover.jpg?q=40" alt="" class="conimage">
+          <p class="imgtext">Book</p>
+        </div>
+        <p class="highlighttext">shiva</p>
+        <p class="location">hyd</p>
+        <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">ljljl</p>
+        <p class="coaching">lsjdfljsd</p>
+      </div> -->
+      <div id="infooter">
+        <div id="div1">
+            <div id="weblogo">
+                <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
+            </div>
+            <div id="playstore">
+                <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
+                    <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
+                </a>
+                <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
+                    <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
+                </a>
+            </div>
+            <div id="copyright">
+                <p>©2022 TechMash Solutions Private Limited.<span> All Rights Reserved.</span></p>
+            </div>
+            <div id="loweritems">
+                <a href="faq.html"><p>FAQs</p></a>
+                <a href=""><p>Privacy POlicy</p></a>
+                <a href=""><p>Terms Of Service</p></a>
+                <a href=""><p>Cancellation & Refund Policy</p></a>
+                <a href=""><p>Careers</p></a>
+                <a href=""><p id="hiring">We're Hiring!</p></a>
+            </div>
+        </div>
+        <div id="div2">
+            <a href="about.html"><p>About Us</p></a>
+            <a href="partner.html"><p>Partner With Us</p></a>
+            <a href="brandact.html"><p>Brand Activations</p></a>
+            <a href="corporate.html"><p>Corporate Offerings</p></a>
+            <a href="contact.html"><p>contact Us</p></a>
+        </div>
+        <div id="div3">
+            <a href="venues.html"><p>Book Venues</p></a>
+            <a href="activities.html"><p>Activities</p></a>
+            <a href="blog.html"><p>Blog</p></a>
+            <a href="faq.html"><p>FAQ's</p></a>
+        </div>
+        <div id="div4">
+            <a href="https://www.facebook.com/PlayoApp/"><p>Facebook</p></a>
+            <a href="https://twitter.com/playoApp"><p>Twitter</p></a>
+            <a href="https://www.instagram.com/playoapp/"><p>Instagram</p></a>
+            <a href="https://www.linkedin.com/company/playo"><p>LinkdIn</p></a>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
+
+
+
+<script  >
+  
+
+  // for (let x in data) {
+  //   var cityx = data[x];
+  // }
+  // console.log(cityx);
+
+  // let con = document.getElementById("con");
+
+  // async function add(url) {
+  //   try {
+  //     var url = `http://127.0.0.1:5000/playo/cities`;
+  //     let response = await fetch(url, {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
+  //     let d = await response.json();
+  //     console.log("d:", d);
+  //     display(d);
+  //   } catch (err) {
+  //     console.log("err:", err);
+  //   }
+  // }
+
+
+  // display = (e) => {
+  //   //  console.log('e:', e)
+  //   e.forEach((el) => {
+  //     for (x in data) {
+  //       var c = data[x];
+  //     }
+
+  //     //   var div = document.getElementById("places");
+  //     //   // div.setAttribute("id","places")
+  //     //   var location= document.createElement("p");
+  //     //   location.innerText= el.location
+  //     //   let img= document.createElement("img")
+  //     //   img.src= el.image
+  //     //   img.setAttribute("id","conimage")
+
+  //     //   let timing= document.createElement("p")
+  //     //   timing.innerText=el.timing
+
+  //     // // console.log(el.timing)
+
+  //     //   var name = document.createElement("p");
+  //     //   name.innerText=el.name
+
+  //     //   Book= "BOOKABLE",
+  //     //   safe= "Safe & Hygiene"
+
+  //     if (el.city === c) {
+  //       let y = `  <div onclick="details(${el.id})" id= "places">
+  //       <div>
+  //         <img src="${el.image}" alt="" class="conimage">
+  //         <p class="imgtext">Coaching</p>
+  //       </div>
+  //       <p class="highlighttext">${el.name}</p>
+  //       <p class="location">${el.location}</p>
+  //       <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">${el.timing}</p>
+  //       <p class="coaching">${el.name}  Coaching</p>
+  //     </div>`;
+
+  //       let place = document.getElementById("place");
+  //       place.setAttribute("class", "bold");
+  //       place.innerHTML = el.city;
+  //       con.innerHTML += y;
+  //     } else {
+  //       console.log("err");
+  //     }
+  //   });
+  // };
+
+
+  // add();
+ 
+
+
+
+
+
+
+
+
+
+//Filtering array of objects from the data base start (With Debouncing Feature)
+
+//=======================================================================>
+
+    //Selectiong Html Content
+
+   
+
+
+    let my_value = JSON.parse(localStorage.getItem("name"));
+    console.log(my_value.city)
+
+    searchLocation();
+    //Search Function Code 
+    async function searchLocation(){
+        //Getting the value again
+        var search_value = my_value.city;
+
+
+       
+
+        let response = await fetch("./database/activityData.json");
+        let data = await response.json();
+        //console.log(data);
+
+        //Writing Function for filter data based on search results
+
+        let filterData = data.filter((el)=>{
+            let regex = new RegExp(`^${search_value}`, "gi" );
+            return el.city.match(regex);
+        })
+
+        console.log(filterData);
+       apprndData(filterData)
+    }
+
+
+  //===========================================================================>
+
+
+
+
+   //Append Data Function 
+   function apprndData(data){
+    // console.log(data)
+    data.map((el)=>{
+      let y = `  <div onclick="details(${el.id})" id= "places" class="clickdiv">
+        <div>
+          <img src="${el.image}" alt="" class="conimage">
+          <p class="imgtext">Coaching</p>
+        </div>
+        <p class="highlighttext">${el.name}</p>
+        <p class="location">${el.location}</p>
+        <p class="timing"><img src="./images/clock.png" alt="" class="clockicon">${el.timing}</p>
+        <p class="coaching">${el.name}  Coaching</p>
+      </div>`;
+
+        let place = document.getElementById("place");
+        place.setAttribute("class", "bold");
+        place.innerHTML = el.city;
+        con.innerHTML += y;
+
+        
+
+    })
+  
+
+   }
+
+
+   function details(x) {
+    console.log("id:", x);
+    let data = {
+      id: x,
+    };
+
+    let location = localStorage.setItem("id", JSON.stringify(data));
+    window.location.href = "detail.html";
+  }
+   
+
+
+
+   
+
+
+
+
+
+
+
+
+//Filtering array of objects from the data base End (With Debouncing Feature)
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Index</title>
+</head>
+<body>
+
+    <!-- Main container  start-->
+    <div id="main">
+
+        <!-- Navbar div -->
+        <div id="navbar_container"></div>
+
+        <!-- Background video div -->
+        <div id="video_container">
+            <video id="video" autoplay loop muted>
+                <source src="video-720.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Download Playo App Div -->
+        <div id="download_app_div">
+
+            <!-- Download Playo app from google play -->
+            <div class="download_inner">
+                <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
+                    <img class="app_download_image" src="https://playo-website.gumlet.net/download/google-play-new.png?auto=compress,format" alt="Google-play">
+                </a>
+            </div>
+
+            <!-- Download Playo app from apple play store -->
+            <div class="download_inner">
+                <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
+                    <img class="app_download_image" src="https://playo-website.gumlet.net/download/app-store-new.png?auto=compress,format" alt="Apple-store">
+                </a>
+            </div>
+        
+        </div>
+
+    </div>
+    <!-- Main container end -->
+
+    <!-- footer container start -->
+    <div id="footer"></div>
+    <!-- footer container end -->
+
+</body>
+</html>
+
+<!-- script start -->
+<script type="module">
+    import navbar from "./components/navbar.js"
+    import footer from "./components/footer.js"
+
+    let container = document.querySelector("#footer");
+    container.innerHTML = footer();
+
+    let navbar_container = document.getElementById("navbar_container");
+    navbar_container.innerHTML = navbar();
+
+</script>
+<!-- script end -->

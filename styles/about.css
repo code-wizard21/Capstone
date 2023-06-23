@@ -1,0 +1,102 @@
+body{
+    padding:0%;
+    margin: 0%;
+}
+#about_block{
+    width: 100%;
+    height:280px;
+    background-color: #6da600;
+    border: 1px solid transparent;
+}
+#aboutus{
+    width:50%;
+    height:35%;
+    border: 1px solid transparent;
+    margin-left: 8%;
+}
+#aboutus_sub{
+    width:60%;
+    height:40%;
+    margin-left: 8%;
+    margin-top: 30px;
+    border: 1px solid transparent;
+}
+#abt{
+    font-size: 50px;
+    justify-content: flex-end;
+    color:white;
+    font-family: loto, sans-serif;
+    font-weight: bolder;
+}
+#abt_sub{
+    color:white;
+    font-family: loto, sans-serif;
+    font-size: 20px;
+}
+#ourstory{
+    display: flex;
+    width:100%;
+    height:300px;
+    margin-top: 70px;
+    border:1px solid  transparent;
+}
+#leftourstory{
+    width:60%;
+    height: 100%;
+    margin-left: 8%;
+    border:1px solid  transparent;
+}
+#rightourstory{
+    width:20%;
+    height:100%;
+    border: 1px solid  transparent;
+}
+#upperimage{
+    width:95%;
+    height:20%;
+    display:flex;
+    justify-content: space-between;
+    border:1px solid  transparent;
+}
+#lowertext{
+    width:100%;
+    height:70%;
+    border:1px solid  transparent;
+}
+#ourstorytitle{
+    color:rgb(97, 96, 96);
+    font-size: 30px;
+    line-height: 0%;
+    font-family: loto, sans-serif;
+    font-weight: bolder;
+}
+.ourstorytext{
+    font-family: loto, sans-serif;
+    color:rgb(97, 96, 96);
+    font-size: 16px;
+    line-height: 30px;
+}
+#ourstorysecond{
+    width:100%;
+    height:250px;
+    display: flex;
+    border: 1px solid transparent;
+}
+#oursecondimg{
+    width:25%;
+    height:100%;
+    margin-left: 12%;
+    border:1px solid transparent;
+}
+#oursecondtext{
+    width:60%;
+    height:100%;
+    border: 1px solid transparent;
+}
+#ourstorylast{
+    width:80%;
+    padding: 0 10%;
+    height:150px;
+    border-bottom: 5px solid rgb(189, 189, 189);
+
+}

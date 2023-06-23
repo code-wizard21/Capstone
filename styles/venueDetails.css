@@ -1,0 +1,719 @@
+
+
+    body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    #navbar{
+        height: 66px;
+        background-color: white;
+        margin-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px 0px;
+    }
+
+
+      /* Navbar start */
+      #navbar{
+        height: 66px;
+        background-color: #FEFFFE;
+        width: 100%;
+        
+    }
+    body{
+        margin: auto;
+    }
+    #logo{ 
+        width: 100px; 
+        height: 45px; 
+        margin-left: -60%;
+    }
+    
+    #pplogo{
+        width: 35px; 
+        height: 35px;
+    }
+    
+    #explorenavbar{
+        display: flex; 
+        padding-top: 10px; 
+        width: 100%;
+        height: 100%; 
+        box-shadow: rgba(0, 0, 0, 0.185) 0px 3px 5px;
+    }
+    
+    #dropdownarrow{
+        width: 12px; 
+        height: 8px;
+        padding-top: 20px; 
+        margin-left: 1%;
+    }
+    
+    #logodiv{
+        margin-left: 9.5%;
+        margin-top: 10px;
+    }
+    
+    #nav2div{
+        margin-left: 67.5%; margin-top: 5px;
+        display: flex; margin-top: 10px;
+    }
+    
+    .loginp{
+        margin-left: 10px; 
+        line-height: 10px;
+        font-size: 14px; 
+        font-family: Arial, Helvetica, sans-serif; 
+        color: #5c5c5c;
+    }
+
+    #nav2div:hover{
+        cursor: pointer;
+    }
+
+    /* popup styling */
+
+    
+    *{
+        box-sizing: border-box;
+    }
+    
+    #modal_container{
+        border: 1px solid green;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+
+    }
+    
+    button{
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        font-size: 14px;
+        padding: 10px 25px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        background-color: green;
+    }
+    
+    #close{
+        height: 27px;
+        position: absolute;
+        right: 20%;
+        top: 17.5%;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    #modal_container.show{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    #modal{
+        display: flex;
+        background-color: white;
+        margin-left: -1.5%;
+        margin-top: -7%;
+        border-radius: 5px;
+        width: 59.3%;
+        height: 290px;
+        max-width: 100%;
+    }
+    
+    #login_left_div{
+        width: 40%;
+        background-color: #fdbd51;
+    
+    }
+
+    #login_right_div{
+        width: 48.5%;
+        height: 80%;
+        margin-left: 5%;
+        margin-top: 3.7%;
+        text-align: center;
+        font-family: Lato, sans-serif;
+    }
+    
+    #input{
+        color: #5c5c5c;
+        padding: 0;
+        font-size: 14px;
+        border-bottom: 1px solid rgb(160, 160, 160);
+        border-bottom-width: 50%;
+        border-image: initial;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        outline: none;
+        padding: 4px;
+        padding-bottom: 8px !important;
+        vertical-align: baseline;
+        text-align: left;
+        width: 100%;
+    }
+    
+    #input::-webkit-outer-spin-button,
+    #input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    
+    #entermobile{
+        font-size: 16px;
+        line-height: 16px;
+        color: #808080;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+    
+    #user_phone_div{
+        margin-bottom: 12px;
+        display: flex;
+    }
+    
+    #sendOTP{
+        width: 100%;
+        height: 20%;
+        background-color: rgb(133, 199, 133);
+    
+    }
+    
+    #countryDrop{
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        color: #424242;
+        vertical-align: baseline;
+        margin-left: 10px;
+        width: 9%;
+    }
+     
+
+     /* Navbar End */
+
+
+
+
+
+
+    /* Banner start */
+    .banner{
+        height: 73px;
+        border: 1px solid transparent;
+        padding-left: 22px;
+        padding-right: 22px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 85%;
+        margin: auto;
+        box-sizing: border-box;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #DBDBDA;
+        width: 15%;
+        height: 38px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .filterbox{
+        position: absolute;
+        height: 300px;
+        border: 1px solid transparent;
+        width: 40%;
+        top: 160px;
+        left: 52.5%;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        box-sizing:border-box;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px 0px;
+        z-index: 100;
+        background-color: white;
+    }
+
+    .filterbox>div:nth-child(1){
+        font-family:"Lato", "Open Sans", sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #558b2f;
+
+    }
+
+    .filterbox > div:nth-child(2){
+        height: 1px;
+        background-color: #C8C9C9;
+        margin-top: 4px;
+    }
+
+    .filterbox > div:nth-child(3){
+      display: grid;
+      grid-template-columns: repeat(6, 75px);
+      column-gap: 15px;
+      row-gap: 15px;
+      padding-left: 25px;
+      padding-top: 10px;
+    }
+
+    .filterbox > div:nth-child(3)>div{
+        height: 75px;
+     
+        border: 2px solid transparent;
+        
+        
+       
+    }
+
+    .filterbox > div:nth-child(3)>div>img{
+        height: 40px;
+        width: 40px;
+        border: 1px solid transparent;
+        margin-left: 15px;
+        margin-top: 10px;
+
+    }
+
+    .filterbox > div:nth-child(3)>div>p{
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        color: #545252;
+      
+        border: 1px solid transparent;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    #buttondiv{
+        border: 1px solid transparent;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+
+        height: 41px;
+    }
+    
+    #buttondiv > div:nth-child(2){
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        line-height: 38px;
+        color: #f2641a;
+        border: 1px solid #f2641a;
+        border-radius: 2px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #buttondiv > div:nth-child(1){
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        line-height: 38px;
+        background-color: #f2641a;
+        color: white;
+        border-radius: 2px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+    }
+
+
+    .filter>img{
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+    }
+
+    .filter > p{
+        font-family: "Lato", "Open Sans", sans-serif;
+        font-size: 13px;
+        line-height: 38px;
+        letter-spacing: 0.5px;
+        color: #949494;
+
+    }
+
+    .banner > div:nth-child(1) > div:nth-child(1){
+        font-family: 'Lato', sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        color: #8c8c8c;
+        margin-top: 7px;
+        margin-bottom: 3px;
+    }
+
+    .banner > div:nth-child(1) > div:nth-child(2){
+        font-size: 15px;
+        font-family: Lato, "Open Sans", sans-serif;
+        letter-spacing: 0.5px;
+        color: #777777;
+    }
+
+    .banner > div:nth-child(2){
+        border: 1px solid transparent;
+        width: 65%;
+
+    }
+
+    .banner > div:nth-child(2)>img{
+        height: 100%;
+        width: 100%;
+    }
+
+    
+
+
+
+
+     /* Banner End */
+
+
+
+
+     /* Main Body start */
+
+     #body{
+         min-height: 78vh;
+         border: 1px solid transparent;
+         padding-top: 15px;
+         
+         box-sizing: border-box;
+     }
+
+     #container{
+
+         border: 1px solid transparent;
+         width: 85%;
+         margin: auto;
+         padding-left: 39px;
+         padding-right: 39px;
+         box-sizing: border-box;
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         column-gap: 33px;
+         row-gap: 60px;
+         padding-bottom: 30px;
+         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+         padding-top: 30px;
+         
+
+     }
+
+     #container > div  {
+         height: 276px;
+         border: 1px solid transparent;
+         box-shadow: rgba(87, 87, 87, 0.16) 0px 1px 4px 0px;
+         border-radius: 2px;
+         cursor: pointer;
+         position: relative;
+     }
+
+     #container > div > div:nth-child(6){
+ 
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        background-color: #558b2f;
+        color: white;
+        width: 12%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 30px;
+        right: 35px;
+        z-index: 3;
+        border-radius: 2px;
+     }
+
+     #container > div > div:nth-child(7){
+
+        width: 25%;
+        position:absolute;
+        background-color: white;
+        right: 18px;
+        top: 60px;
+        font-size: 11px;
+        font-family: "Lato", "Open Sans", sans-serif;
+        height: 23px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #9C8B8D;
+
+     }
+
+     #container > div > img:nth-child(1){
+         height: 50%;
+         width: 100%;
+         border-top-right-radius: 2px;
+         border-top-left-radius: 2px;
+     }
+
+     #container > div > div:nth-child(2){
+         font-family: "Lato", "Open Sans", sans-serif;
+         font-size: 18px;
+         line-height: 22.5px;
+         letter-spacing: 0.1px;
+         color: #6e6e6e;
+         border: 1px solid transparent;
+         padding-left: 8px;
+         height: 45px;
+         overflow: hidden;
+         padding-right: 10px;
+         margin-bottom: 3px;
+
+     }
+
+     #container > div > div:nth-child(3){
+         font-family: "Lato", "Open Sans", sans-serif;
+         font-size: 15px;
+         letter-spacing: 0.5px;
+        color: #828769;
+       
+         padding-left: 8px;
+
+     }
+
+     #container > div > div:nth-child(4){
+        font-family:  "Lato", "Open Sans", sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+        font-style: italic;
+        padding-left: 8px;
+        margin-top: 5px;
+     }
+
+     #container > div > div:nth-child(5){
+         display: flex;
+         flex-direction: row;
+        padding-left: 8px;
+        margin-top: 5px;
+        justify-content: space-between;
+       
+        border: 1px solid transparent;
+        align-items: center;
+     }
+
+     #container > div > div:nth-child(5)>div:nth-child(1){
+         font-family: "Lato", "Open Sans", sans-serif;
+         font-style: 14px;
+         line-height: 23.8px;
+         color: #528c2f;
+     }
+
+     #container > div > div:nth-child(5)>div:nth-child(2){
+         display: flex;
+         flex-direction: row;
+         padding-right: 20px;
+
+     }
+
+     #container > div > div:nth-child(5)>div:nth-child(2)>img{
+         height: 20px;
+         width: 20px;
+         margin-right: 2px;
+     }
+
+     #container > div > div:nth-child(5)>div:nth-child(2) > div{
+        color: #424242;
+        font-style: 15px;
+        letter-spacing: 0.5px;
+        font-family: "Lato", "Open Sans", sans-serif;
+     }
+
+
+
+     
+        /* these style for need help wala div */
+        #needhelp{
+            position: fixed;
+            bottom: 0%;
+            right:10px;
+            display: flex;
+            box-sizing: border-box;
+            padding-left: 7px;
+            padding-right: 7px;
+            justify-content: space-between;
+            width:12%;
+            height: 32px;
+            background-color: #568c3e;
+            color: white;
+            font-family: 'lato', sans-serif;
+            line-height: 0%;
+            font-size: 14px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            
+        }
+
+        #needhelpiconimage{
+            margin-top: 4%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /* Main Body End */
+
+
+
+     /* Media Queries start */
+
+      @media only screen and (min-width:0px) and (max-width:374px){
+        #container{
+            grid-template-columns: repeat(1, 1fr);
+            /* width: 100%; */
+            margin-top: 0px;
+
+        }
+
+        #container > div{
+            padding-bottom: 23px;
+            box-sizing: border-box;
+            margin-top: 0px;
+        }
+
+        #navbar{
+            margin-bottom: 0px;
+        }
+        /* #footer{
+            width: 100%;
+        }
+
+        #infooter{
+            width: 100%;
+            
+        }
+        #div1{
+            width: 100%;
+        }
+        #body{
+            width: 100%;
+            padding: 0px;
+        }
+
+         .banner{
+            width: 100%;
+        } 
+        #navbar{
+            width: 100%;
+        } */
+
+        #navbar{
+            width: 100%;
+        }
+        #nav2div{
+            margin-left: 10%;
+        }
+        #pplogo{
+            visibility: hidden;
+        }
+        #logo{
+            margin-left: 2%;
+            width: 70px;
+            height: 30px;
+            margin-top: 7px;
+        }
+        .banner{
+            visibility: hidden;
+        }
+     }
+
+
+     @media only screen and (min-width: 375px) and (max-width:764px){
+
+
+        #container{
+            grid-template-columns: repeat(2, 1fr);
+            /* width: 100%; */
+            margin-top: 0px;
+
+        }
+
+        #container > div{
+            padding-bottom: 23px;
+            box-sizing: border-box;
+            margin-top: 0px;
+        }
+
+        #navbar{
+            margin-bottom: 0px;
+        }
+
+        #nav2div{
+            margin-left: 42%;
+        }
+        .banner{
+            visibility: hidden;
+        }
+
+        #logo{
+            margin-left: 3%;
+        }
+
+        
+
+
+        
+      
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     /*  Media Queries end */
