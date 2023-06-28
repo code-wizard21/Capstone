@@ -7,14 +7,14 @@ function footer()
     return `<div id="infooter">
     <div id="div1">
         <div id="weblogo">
-            <a href="index.html"><img src="https://playo-website.gumlet.net/logo/playo-logo-footer-website.png?auto=format,compress&h=100" alt="logo" width="100%" height="100%"></a>
+            <a href="index.html"><img src="https://playo-website.gumlet.io/playo-website-v2/Logo+with+Trademark_Filled.png" alt="logo" width="100%" height="100%"></a>
         </div>
         <div id="playstore">
             <a href="https://play.google.com/store/apps/details?id=com.techmash.playo">
-                <img src="https://playo-website.gumlet.net/icons/download-android.png?auto=format,compress " >
+                <img style="width: 100%;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBrl8xCF4PzFLK1-f2_Ms2N0OZUJHoilJS-epF_IB9W7kvYo2PJfLbzCX3ORT3Qzl_D1Cc_jC9GxsjLY3lf9ccJ-VncGIcu3GDPaf1fBjafkkdklsKNdbdWJznOshIkxsFzSUHyfyEzpbNLbVP5jFj7-VgCLkD-3H4xHoNHwQvGTXirMXOOTuzn9NItpmp/s320/gplay.png" >
             </a>
             <a href="https://apps.apple.com/us/app/playo-local-sports-community/id1018786950?ls=1">
-                <img src="https://playo-website.gumlet.net/icons/download-ios.png?auto=format,compress" >
+                <img style="width: 100%; margin-left: 20px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgglbv7FVzcglgVSiYJFTzRPDl__fmMhVlNI5rBm9_tY7Cdd43qgyp97Pp2gXeXKRJARVmH_cTK8xqgJ701JJPoyKOJQcllN-uoyDQVvk9sumDiEFj3CBmSWq4GXws2wTYaXnMdy14fojSCz_3anK7U-mfITxePV9MWIWenYj4YW-1fzzkCi0Gw1ydpOv0r/s320/apple.png" >
             </a>
         </div>
         <div id="copyright">

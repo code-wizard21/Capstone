@@ -416,3 +416,13 @@
 #needhelpiconimage{
     margin-top: 4%;
 }
+#otpPopup{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    background-color: #fdbd51;
+    padding: 2%;
+    opacity: 1;
+    pointer-events: auto;
+    
+}

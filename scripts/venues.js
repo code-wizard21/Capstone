@@ -8,6 +8,7 @@ document.querySelector("#logo").addEventListener("click", ()=>{
 
 // navbar popup functionality
 document.querySelector("#giveOTP").style.visibility = "hidden";
+document.querySelector("#resendOTP").style.visibility="hidden";
 
 const open = document.getElementById("nav2div");
 const modal_container = document.getElementById("modal_container");
@@ -47,6 +48,34 @@ function login(){
 
 }
 
+// Function for Random OTP.
+
+function generateOTP() {
+    var otpGen = "";
+    for (var i = 0; i < 6; i++) {
+      otpGen += Math.floor(Math.random() * 10);
+    }
+    return otpGen;
+  }
+
+let otp;
+  console.log(otp)
+  function showPopupWithOTP() {
+    var popup = document.getElementById("otpPopup");
+    var otpValue = document.getElementById("otpValue");
+  
+    otpValue.textContent = otp;
+    popup.style.display = "block";
+  
+    setTimeout(function() {
+      popup.style.display = "none";
+    }, 3000);
+  }
+  
+//   var otpButton = document.getElementById("otpButton");
+//   otpButton.addEventListener("click", showPopupWithOTP);
+  
+  
 
 
 //When user add mobile number to it
@@ -56,9 +85,8 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
         alert("Please Give correct Mobile Number");
     }
     else{
+        
         localStorage.setItem("mobileNumber", mobNo);
-        // modal_container.style.visibility = "hidden";
-        // document.querySelector(".loginp")
         document.querySelector("#entermobile").textContent = `We have sent an OTP to ${mobNo}`;
         document.querySelector("#rem1").style.visibility = "hidden";
         document.querySelector("#rem2").style.visibility = "hidden";
@@ -68,11 +96,18 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
         document.querySelector("input").style.textAlign = "center";
         document.querySelector("#sendOTP").style.visibility = "hidden";
         document.querySelector("#giveOTP").style.visibility = "visible";
-
+        document.querySelector("#resendOTP").style.visibility="visible";
+        otp = generateOTP()
+        showPopupWithOTP();
+        let resend = document.querySelector("#resendOTP");
+        resend.addEventListener("click", ()=>{
+            otp = generateOTP()
+            showPopupWithOTP();
+        })
         document.querySelector("#giveOTP").addEventListener("click", ()=>{
 
-            let otp = document.querySelector("input").value;
-            if(otp == "123456"){
+            let entered_otp = document.querySelector("input").value;
+            if(entered_otp == otp){
                 // alert("success");
                 modal_container.classList.remove("show")
                 document.querySelector("#myBtn").textContent = mobNo;
@@ -98,6 +133,7 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
                 document.querySelector("#input").placeholder = "Enter Mobile Number"
                 document.querySelector("#sendOTP").style.visibility = "visible";
                 document.querySelector("#giveOTP").style.visibility = "hidden";
+                document.querySelector("#resendOTP").style.visibility="hidden";
 
             }
 
@@ -105,6 +141,8 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
        
     }
 })
+
+
 
 //Login and pop up full functionalities end
 
