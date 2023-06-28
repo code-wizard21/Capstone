@@ -23,24 +23,6 @@ Admin dashboard with the ability to add data and view user details, order, payme
 - After getting all the code in VS Code please open your terminal and run the code in node as **node server.js**
 - If still it not work **try to check your local browser port number and put that number inside port (server.js)** 
 
-## Contributors
-
-- Bishal Samanta [@bishal-Samanta](https://github.com/bishal-Samanta/)
-- Shivangi Mall as [@smdp365](https://github.com/smdp365)
-- Abhijeet Dharme as [@abhidharme](https://github.com/abhidharme)
-- Abhishek Vasant Satpute as [@abhisheksatpute369](https://github.com/abhisheksatpute369)
-- K Mahesh Shiva Goud as [@msg-1](https://github.com/msg-1)
-- Rahul Hooda as [@Babaji0007](https://github.com/Babaji0007) 
-
-## Roles
-- Mahesh - Implemented server-side and link with activities page, build the admin page layout, build a basic structure of activities page, Filter Function , Payment Gateway Integration, Login Functionalities, Media Queries
-- Bishal - Blog page with news Api work , Dtabase creating , Book venues page, Venue details page.
-- Shivangi - Home page, Single venue page, signup login popup, faq pages, linking website design fixing, Media Queries
-- Abhisekh - Footer page , cart page , design part of activities section , need help, Fixing Design of other pages  
-
-- Abhijeet - Login profile page , feedback page , booking page, formspree. 
-- Rahul- Activities landing page, blogs.
-
 ## Solution Approach
 
 ### Waterfall Model
