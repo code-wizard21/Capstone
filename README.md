@@ -59,16 +59,6 @@ APIs
 
 **Others:** Local Storage, Google Map Embeded link 
 
-## Challanges we faced
-
-- Merging each other code on Github
-
-- Read others code and make changes to it
-
-- Exact pixel-perfect cloning of the website
-
-- Edge case problem solving
-
 ## Website flow for **_User_**
 
 - Home page (index.html)
