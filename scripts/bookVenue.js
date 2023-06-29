@@ -4,6 +4,9 @@
     
 //Login and pop up full functionalities start
 
+let Guser = localStorage.getItem("Glogin");
+document.querySelector("#myBtn").textContent = Guser;
+
 document.querySelector("#logo").addEventListener("click", ()=>{
     window.location.href = "index.html";
 })

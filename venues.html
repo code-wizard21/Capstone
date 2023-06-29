@@ -230,7 +230,8 @@ document.getElementById("google").addEventListener("click",function(){
     // The signed-in user info.
     const user = result.user;
     let GoogleUsername = user.displayName;
-    document.querySelector("#myBtn").textContent = GoogleUsername;
+    let loginStatus = localStorage.setItem("Glogin",GoogleUsername);
+   
     // console.log(user)
     // IdP data available using getAdditionalUserInfo(result)
     // ...
@@ -250,7 +251,8 @@ console.log("hello")
 
 })
   //  Authenticate Google Login 
-
+let Guser = localStorage.getItem("Glogin");
+document.querySelector("#myBtn").textContent = Guser;
   function checkGoogleLogin(){
     if(Glogin == true){
      

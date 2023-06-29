@@ -64,6 +64,7 @@
         font-size: 14px; 
         font-family: Arial, Helvetica, sans-serif; 
         color: #5c5c5c;
+        width: 100%;
     }
 
     #nav2div:hover{

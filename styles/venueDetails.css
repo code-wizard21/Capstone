@@ -428,7 +428,7 @@
      }
 
      #container > div  {
-         height: 276px;
+         height: 500px;
          border: 1px solid transparent;
          box-shadow: rgba(87, 87, 87, 0.16) 0px 1px 4px 0px;
          border-radius: 2px;
@@ -585,7 +585,9 @@
             margin-top: 4%;
         }
 
-
+#main{
+    height: 10%;
+}
 
 
 

@@ -588,9 +588,9 @@ p{
 }
 
 #map_div{
-    width: 88%;
+    width: 96%;
     margin: auto;
-    height: 220px;
+    height: 295px;
 
 }
 
@@ -636,3 +636,4 @@ p{
     height: 100%;
     border: 1px solid black;
 }
+

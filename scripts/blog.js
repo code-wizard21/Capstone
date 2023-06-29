@@ -283,4 +283,6 @@ function apprndData(data) {
   });
 }
 
+let Guser = localStorage.getItem("Glogin");
+document.querySelector("#myBtn").textContent = Guser;
 //Search Feature in news api End================================>

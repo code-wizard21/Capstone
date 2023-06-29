@@ -116,7 +116,8 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
 
 
-
+let Guser = localStorage.getItem("Glogin");
+document.querySelector("#myBtn").textContent = Guser;
 
 //Filter Products
 
@@ -148,25 +149,26 @@ displayUi(data);
 
 function displayUi(data){
     document.querySelector("#container").innerHTML = "";
-    document.querySelector("#selected-location").textContent = data[0].location
+    
     data.map((el)=>{
        // console.log(el)
 
         //Destructuring ob objects
-        let { name, imgUrl,location ,rating , filter_by} = el;
+        // let { name, imgUrl,location ,rating , filter_by} = el;
        
         let iconLink = "https://playo-website.gumlet.net/icons/sh.jpeg?auto=compress,format&q=90";
 
-
+        document.querySelector("#selected-location").textContent = el.location;
         //Function for votes
         let votesCount = Math.floor(100 + Math.random() * 900);
-
+        
         //Create Html Template
         let mainDiv = document.createElement("div");
+        mainDiv.setAttribute("id","main")
         let mainImg = document.createElement("img");
         let nameDiv = document.createElement("div");
         let locationDiv = document.createElement("div");
-        let playDiv = document.createElement("div");
+        // let playDiv = document.createElement("div");
         let lastDiv = document.createElement("div");
         let BookableDiv = document.createElement("div");
         let CovidDiv = document.createElement("div");
@@ -176,25 +178,30 @@ function displayUi(data){
         let votesDiv = document.createElement("div");
 
         //Set values for all div+
-        mainImg.src = imgUrl;
-        nameDiv.textContent = name;
-        locationDiv.textContent = location;
-        playDiv.textContent = filter_by[0];
+        mainImg.src = el.image;
+        nameDiv.textContent = el.name;
+        locationDiv.textContent = el.location;
+        // playDiv.textContent = el.filter_by[0];
         BookableDiv.textContent = "BOOKABLE";
-        safeImg.src = iconLink;
+        // safeImg.src = el.iconLink;
         safeDiv.textContent = "Safe & Hygiene";
-        ratingDiv.textContent = rating;
+        ratingDiv.textContent = el.rating;
         votesDiv.textContent = `${votesCount} votes`
 
         //Append Properly
         CovidDiv.append(safeImg, safeDiv);
         lastDiv.append(BookableDiv, CovidDiv);
-        mainDiv.append(mainImg, nameDiv, locationDiv, playDiv, lastDiv, ratingDiv, votesDiv);
+        mainDiv.append(mainImg, nameDiv, locationDiv, lastDiv, ratingDiv, votesDiv);
         document.querySelector("#container").append(mainDiv);
 
         mainDiv.addEventListener("click", ()=>{
             window.location.href = "venueDetail.html";
-            localStorage.setItem("singleVenueDetails", JSON.stringify(el));
+            localStorage.setItem("singleVenueLocation", JSON.stringify(el.location));
+            localStorage.setItem("singleVenueName", JSON.stringify(el.name));
+            localStorage.setItem("singleVenueImage", el.image);
+            localStorage.setItem("singleVenueImage2", el.image2);
+            localStorage.setItem("singleVenueAddress", JSON.stringify(el.address));
+            localStorage.setItem("singleVenueTiming", JSON.stringify(el.timing));
             localStorage.setItem("votes", votesCount)
         })
         
