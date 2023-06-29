@@ -17,7 +17,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+     .circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin-right: 10px;
+    }
 
+    .circle img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 41%;
+      left: 28%;
+    }
+</style>
 </head>
 <body>
     
@@ -50,7 +77,16 @@
                         <img id="close" src="https://playo-website.gumlet.net/playo_functional/Icons/closeButton.svg" alt="">
         
                         <div id="login_left_div">
-                            <img width="100%" src="https://playo-website.gumlet.net/icons/login-graphics.png?auto=compress,format" alt="">
+                            <div class="icons">
+                                <div class="circle" id="google">
+                                  <img src="data:image/png;base64,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" alt="Image">
+                             
+                                </div>
+                                <div class="circle" id="github">
+                                       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAkFBMVEX///8XFRUAAAAUEhIJBQUQDQ0MCQkEAADt7e319fXr6+vw8PAVEhLo6Oi/v7/6+vpcW1shHx9rampXVla5uLh4d3dBQECfnp7j4+PLy8tPTk7HxsbX19cuLS1IR0eYl5eOjY04Njaop6coJiaFhIRubW0yMTGvrq58e3tjYmKSkpKJiYnc29tDQkIkIiKkpKQrDOYYAAAKMUlEQVR4nO2d53arOhBGDyMDJrjhGre4xiVOef+3u8Y+jjGgGYEKPndp/8paSRAfqEyT+PPHYrFYLBaLxWKxWCwWi8VisVgsFovF8u/Rbs7G09aF6XjWbFd9P8oIXsY/p84GMkS97c+0GVR9f1IE02VnHoupMScDq8W/2fRO03rV91mKcHqKtdXcrLSMzGg7Dau+32IE+yMDILQlVJ4fRGf9z2gM+z0AP6dTUm/ybf8vaJwdHPCKibvhgTcYV33/OO3+CqDgu3t4jwDz/ROvIKO5+Ljj4cL34jklthcFphXiNS6fcHkcRdBQIe8q0VlUrSdFK5IZenkSvX3VmhK8dtR0zkeJk8+qdf2l/QE11fJiarB9iqE424EOeTHw/QTL4kl977zjwqBiec03ba/vCgxfq9TXL2uViePBujp9B7VrA4fKummou3v+Klw1q9DXjAzpOy8YXgVL4lTn7JnGhb5pfX0jw+8XBoYttx+z+s6AUfN7bWz4VaNwUYG+s8KTKX37SvSdFY7+3/pMKZxWpu+s0MBqMTM+fyZgoN1/CjyD63uewhe9+torLc67ON5Gr5f/XuEAvAIdnfp+Ktd3VvihTx9ngmFxos9XOjbdS/IwfzrTONG4uSKY97H+OR2HoCq45gGsjtvRerHhPE9dw3CQ30HhcP11c98B+RCGC/C2fr1mJ0acBrt69PU5AxBmv3/SXn/JvUYPVot7krDJyQboCdO0Oa2584dk0LhXXqIHw9ZDm5P8DsFAR6a0y3uB6ZjQrGQgn8FkmroUz23xe+r1jXkrRI59ON5lJsCG69X8WwWJX/Pc9B8wcHIuVKBRWRq8twJ5kdm183tr7KIrWk063cH2tFyetofucTKM4GEh8POXN55ABqqTpJwJLRaY+/dh99xPLzUiXvdjP3sJ0zcUvnz2F+/RdQVtwCQ/MrjhPlbF3u8L14dwh5x/GUewOY7G1JOerbs78Hk9jrMyxa9QbUif25AD77z/CWeCC3L7kxvY5QdH4FhcBZ9Xvg2q0zREoweJ5VcexInQG0Zo8RuuKXQrPhEnQm/yh7tOOEqNbt4aX63AmrLVvol5gXoFohEuUJWS2aKtaB2DPAP/2jR3Ai9G6GFxNFiqaSUfNEfAQE3eEE9E+JqcsysfaNuK0hUOGghlkZJGOHRQ14vlm4kFmRGBJiWN8CCizJD2r8pARQp1BpvR+fuMr8BeC/AeqneWofI8DV/etUcn6hh3p69+tUdFPxRkto8+1YbGUPOBerreRLoNsom5AiFcOlTz0jFSKhuo2vFMEXBd+ptA2eAM39NV1AAB5sjEyNoZ7RX+BHXE7x5Z4gqZZDqNeICqrEEM4hFLOvZEQYxeS/sK4tRfbkHOm+mii4QaW5BiiCZ0JN1e3BY08QKpV9iQesi4LcjAzNZGfBRK+fX4KqjXFbyDV45Bi74CF8LfVOGsCPCC38VW4tK4IWpkionZYX1UKj46xK6swhkTA+2j7qq8NxMyNNxkrN4fi446zC8/1SEpCUdhWJIkzNumfr+P8uY+OomyhrktxehQkZhGUUPN/VKogACd7OCn9HXRwa0yu0OBx9bLJ/DQiIHJHTdojZzEjaBhVzOG6BU08iVhbuNj21CJeAxqb7ur0tf9Rmfn8mO7MKhAieQBunH8ad6ghFdqIrUjBO4S6hKotbzikWoEyrgpBcFzFLoEGlwH+YVkGgWa8udj8OCoJoGe9pjvHTxHKSEQWwe5VXgaQE0qiWUCzX02InPu0hdmUjGn9HXRWIhjIGz/lzDCLA53V/rCnJrwm0BDQTUqPCuRBMUD9+aMUXydl5jO8dnZV1RJRUOEZ5elL4yvr4ypk4DTw4dKeaufqLAwNssQt1E+yUwUOZk6f4G6jfIpUDwpYCy0fSIElt/1GuTvb7vBIjOHSqGRE7ksPb4QymWuhCF6qFQtEFFEYiY0igZFJd02qhjOxDzapu5BplwNTes4Zs7PoE4+kSvnJAu5NO/bP79AsphL6vJEFY6BwAy1s10i7BtDFFJJJeeECMgbWEpdnzx6RN32k3yoYkBZpy30qFNRK9wYEsM8ybgCsdQ7ejPZdfJsF+mSX9xjinH1xWbaK/rxynYgqiD1jK8tvNajG5fvP9SugriRiZ66+yOtTyKidoNcKGKFbzoUCrw/FWlmgT56bmejfDlsCp2sq2KGw72xv3iqvfuWL3KuiZLoOj2PxjA4KvR+g67Y2V9KFmHSWLo15iirXVuLHl2q5uicTPgXIPc8IgYbJf20/y16dJuiDF7aKYRDfzbeD3JOOHJh9SM5nwajnfhhLap29r09jPdf63bayz5pF6A7Ld1vwtaxyBcPvDc1+lKBi0SkqeXmjBUfou6+RCjjdX10ix0mpO7U2Idt2My5r3nt3N1hlxNk3kfjF8FXGTSniyMU/k4Mc1XpS3nVrpcIJfPq9S4i55PulnDXptvuZMP5MhOBwuxWKi7CYHufSrCKRNcDsqD6C9Bt+sjFNwrtw3RgBHZ3Ewnbw8gcsp46+C55pJ7a9GSUespuYoZ2+HcoEk+gtrFzcNXu38+EDhJHmfLjNmLutoBXlINq4zcTukjsbeUGhsQSW69lvoajYHfyI9mO5P0GJAOOaeUJlq3j5znko/TAowvZ13Q7tJEb4RedBogtkLmXVl8oF2ZjF3dvM9+lEg0KU+mVLMzREOjKPueELZgX2GC+6KW/ih7aqScxmY2RJNr5yRrJ4hlukbjPQ7t6wunZTposopqtUpNhTbzmueDZ61o6aEy2kz7MZaOzSXk9dJJ55x8nLWFTquBary9znrE7Uy71dPDVuBxF+TboF3EKqWNjUvoO9BVLkgmlZ/fuhc1mU9RN+oUoV3nEk9gQSZJJhqh5mvUCzlJD79bvzDBUkgCtu+LGmu7SlbTjpOQ8oAIC9ddwps85VHEgkLhAXUdsJ0k7uArarGeONObpM1J5NE8rlM6e1QWjFqD1eKVfgvQ3J3xZ51NQYG1l6IuSYSOlkEFHKsYstkzUzG37rs/TLmoNVut00ZP47QgJrO0MftY9jDL1+C7A12A9nTXD8OVz3Bq9TxrCN1QXCPn6BvehnAmGOdaVC0lqNXGBdDoJhoa/6Nomv67IPIUC9VQB4FCnVjLxN8g/h/2mz9gWjSQf+G0VEohaMszkbtokLfQDKAWOQcHdJc9MaXgen2mj5vG5qxEI8yq/if3O76YN8WpgxKNn1Qy/O33g7lBTIVDaCpSn3uG9RHmBZxPQoPXCZQ2cyL1wop4jEKr8SnSSy+dPlAt0oWvUOEMZRzn9VEogg+gJvkWfYJ+tvpIRCJHhDwvTBIt0dVdpgQxgYdi0FqK9aDxILCmQQWNh3rIWI1z791qlAtt+Esa2B/76eeaWHFo9+Gs5FznfuHe1FhoAvcrsTmFeT37s7UKRmPfr9T/8k+aNQqoYH3q9ZaGOFi57vcNzrQsWi8VisVgsFovFYrFYLBaLxWKxWCyWLP8Bd0OMHy9KQeAAAAAASUVORK5CYII=" alt="">
+                                </div>
+                                
+                               </div>
                         </div>
                         <div id="login_right_div">
                             <p id="entermobile">Enter Your Mobile Number</p>
@@ -121,3 +157,139 @@ let container = document.querySelector("#footer");
     container.innerHTML = footer();
 </script>
 
+<script type="module">
+  let Glogin = false;
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+   
+import { signInWithPhoneNumber } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import {signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDmvzBPz_gXwnzonXrHboSqhEZcKF89GtM",
+      authDomain: "authe-5c9cf.firebaseapp.com",
+      projectId: "authe-5c9cf",
+      storageBucket: "authe-5c9cf.appspot.com",
+      messagingSenderId: "1076434182525",
+      appId: "1:1076434182525:web:f65dc5b406710546496c14"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    console.log(app);
+
+// document.getElementById("signup").addEventListener("click",function(){
+//     let email = document.getElementById("email").value;
+//     let password = document.getElementById("password").value;
+//     const auth = getAuth();
+// createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+    // Signed in 
+    // const user = userCredential.user;
+    // ...
+//     alert("Done")
+//     console.log(user)
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     console.log(errorMessage)
+//     // ..
+//   });
+
+// })
+
+
+
+// ------------- Google ---------------------------
+
+
+const provider1 = new GoogleAuthProvider();
+
+
+const auth = getAuth();
+
+
+
+document.getElementById("google").addEventListener("click",function(){
+    // let email = document.getElementById("email").value;
+    // let password = document.getElementById("password").value;
+    const auth = getAuth();
+    signInWithPopup(auth, provider1)
+  .then((result) => {
+    Glogin = true;
+    checkGoogleLogin();
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    let GoogleUsername = user.displayName;
+    document.querySelector("#myBtn").textContent = GoogleUsername;
+    // console.log(user)
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    // const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+
+console.log("hello")
+
+
+})
+  //  Authenticate Google Login 
+
+  function checkGoogleLogin(){
+    if(Glogin == true){
+     
+                localStorage.setItem("login", true);
+                modal_container.classList.remove("show")
+                // document.querySelector("#modal").style.visibility = "hidden";
+                open.addEventListener("click", ()=>{
+                    modal_container.classList.remove("show")
+                    window.location.href = "login_profile.html";
+                    login()
+
+                })
+    }
+  }
+
+// -------------------- PHONE NUMBER-------------------------------
+// auth.languageCode = 'it';
+
+// document.getElementById("OTP").addEventListener("click",function(){
+//     let phoneNumber = document.getElementById("mob").value;
+
+
+//     // const phoneNumber = getPhoneNumberFromUserInput();
+// const appVerifier = window.recaptchaVerifier;
+
+// signInWithPhoneNumber(auth, phoneNumber, appVerifier)
+//     .then((confirmationResult) => {
+//       // SMS sent. Prompt user to type the code from the message, then sign the
+//       // user in with confirmationResult.confirm(code).
+//       window.confirmationResult = confirmationResult;
+//       alert("Done By Monu")
+//       // ...
+//     }).catch((error) => {
+//       // Error; SMS not sent
+//       console.log(error)
+//     });
+// })
+
+
+
+
+  </script>
