@@ -205,38 +205,44 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
   //===========================================================================>
 
+  //Creating Debouncing Function
   let id;
 
-  //Creating Debouncing Function
-  function debouncingFunction(fetchFunction , delay){
-
-    if(inputTag.value.length == 0){
-        document.querySelector("#show-results-div").style.visibility='hidden'
-    }
-
-    if(id){
-        clearTimeout(id);
-    }
-
-    id = setTimeout(()=>{
-        fetchFunction()
-
-    }, delay)
-
+const debounce = () => {
+  if (id) {
+    clearTimeout(id);
   }
 
-  //Creating fetch Function
-  async function fetchFunction(){
+  id = setTimeout(() => {
+    main();
+  }, 500);
+};
+// searchURL+'&query='+searchTerm
+const main = async () => {
+  try {
+    let searchInput = document.getElementById("search").value;
+    let response = await fetch(`https://ill-pear-toad-yoke.cyclic.app/cities?q=${searchInput}`);
+    let data = await response.json();
+    // displayData(data.city)
+    apprndData(data)
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//   //Creating fetch Function
+//   async function fetchFunction(){
       
     
-    searchLocation();
+//     searchLocation();
 
-  }
-
-
+//   }
 
 
-   //Append Data Function 
+
+
+//    //Append Data Function 
    function apprndData(data){
 
     
@@ -258,12 +264,13 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
         //Creating Elements
         let mainDiv = document.createElement("div");
+        mainDiv.setAttribute("class","debouncediv")
         let img = document.createElement("img");
         let span1 = document.createElement("span");
         let span2 = document.createElement("span");
 
-        let imgsrc = "data:image/jpeg;base64,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";
-
+    
+       let imgsrc = `https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd6CksdH734W00e_xKzuBe4V5czKsSqFaGuXclGGTo3Am8IhuCCqem9pJmG44w7HbErh8CsQM2CRpTnxFOTWG9tziu9tJQZ7vf1VM-jabnEFtdqT2lBvBBKGcERx9cVheeeAr3BTX95TzPiQgytQSRW6L0TmLlUI-TvKnG5VnrCTybTcNT0fuzVOVVOqjs/s512/location.png`;
 
         //set value to it
         img.src = imgsrc;
@@ -306,6 +313,66 @@ document.querySelector("#sendOTP").addEventListener("click", ()=>{
 
 
    }
+
+   
+
+
+
+   
+
+
+
+
+
+
+
+
+//Filtering array of objects from the data base End (With Debouncing Feature)
+
+//         
+
+
+//         //set value to it
+//         img.src = imgsrc;
+//         span1.textContent = location;
+//         span2.textContent = name;
+
+//         //Append data 
+//         mainDiv.append(img, span1, span2)
+//         document.querySelector("#show-results-div").append(mainDiv);
+
+//         mainDiv.addEventListener("click", ()=>{
+          
+//             window.location.href = "venueDetail.html";
+
+//             let arr = [];
+//             arr.push(el);
+//             localStorage.setItem("venueDetails", JSON.stringify(arr));
+//         })
+
+
+
+       
+        
+
+//     })
+
+//     inputTag.addEventListener("keypress", (event)=>{
+//         //console.log("Test");
+//         if(event.key == "Enter"){
+//         window.location.href = "venueDetails.html";
+//         localStorage.setItem("venueDetails", JSON.stringify(data))
+//         }
+//     })
+
+
+//     }
+
+    
+
+
+
+//    }
 
    
 

@@ -37,11 +37,14 @@
                 <div id="quote">It is a happy talent to know how to play.</div>
             </div>
 
-            <div>
-                <input type="text" name="" id="search" placeholder="Search...">
+            <!-- <div>
+                <input type="text" id="search" oninput="debouncedSearch(event)" />
                 <i class="fa fa-search" aria-hidden="true"></i>
+            </div> -->
+            <div id="serchdiv">
+                <input type="text" placeholder="Search" id="search">
+                <!-- <button>Search</button> -->
             </div>
-
         </div>
         <!-- topbar start -->
 
@@ -65,10 +68,9 @@
 
                 <div id="sports-news">SPORTS</div>
                 <div id="health-news">HEALTH</div>
-                <div>CRICKET</div>
-                <div>FOOTBALL</div>
-                <div>TENNIS</div>
-                <div>QUIZ</div>
+                <div id="cricket-news">CRICKET</div>
+                <div id="football-news">FOOTBALL</div>
+                <div id="tennis-news">TENNIS</div>
                 
 
             </div>
@@ -110,22 +112,12 @@
 
                     <!-- Dynamic News -->
                     <div class="dynamic-news">
-
-                        <!--                         
-
-                        <div>
-                            <div><img src="https://ichef.bbci.co.uk/news/1024/branded_news/3B01/production/_122750151_404745d1-0dcf-4af2-8b3d-c69a254883bf.jpg" alt=""></div>
-                            
-                            <div>THIS IS FOR DATE</div>
-                            <div>Virat Kohli | Captaincy lessons we learnt from the former </div>
-                            <div>Looking for a golf guide? Whether you are going to one of the four major golf</div>
-                        </div> -->
-
-
-
+                    
 
                     </div>
-
+                 <div id="pagination">
+                       <button id="pminus">-</button><span id="spage">1</span><button id="pplus">+</button>
+                 </div>
 
                 </div>
 
@@ -216,9 +208,9 @@
             </div>
         <!-- Footer End-->
 
-    </div>
+    </div> 
 
 
+    <script src="./scripts/blog.js" type="module"></script>
 </body>
 </html>
-<script src="./scripts/blog.js" type="module"></script>

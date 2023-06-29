@@ -15,6 +15,10 @@
         width: 100%;
         
     }
+    .debouncediv{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        margin: 10px;
+    }
     body{
         margin: auto;
     }

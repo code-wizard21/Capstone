@@ -164,7 +164,25 @@
 
 /* ===Main Contyent Box start === */
 
-    
+  .div2{
+    margin-top: 0%;
+    padding-top: 1%;
+  }  
+  .div3{
+    padding-top: 27%;
+    height: 36px;
+    margin-top: 5px;
+    font-family: "Roboto Slab", Georgia, serif;
+    color: #19232d;
+    font-size: 14px;
+    line-height: 18.2px;
+    padding-left: 14px;
+    padding-right: 14px;
+    overflow: hidden;
+    border-left: 3px solid #548A2F;
+    /* padding-bottom: -3%; */
+  }
+
     #Container{
 
         background-color: #FEFEFF;
@@ -259,19 +277,27 @@
     /* Dynamic part start */
 
     .dynamic-news{
+        height: 355px;
         border: 1px solid transparent;
-        min-height: 70px;
-        display: grid;
-        grid-template-columns: 45.5% 45.5%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-between;
         padding-right: 25px;
-        row-gap: 28px;
     }
 
     /* News Box */
     .dynamic-news>div{
-        height: 292px;
+        height: 150px;
+        width: 300px;
         border: 1px solid transparent;
+        height: 320px;
+        border: 1px transparent;
+        width: 45.5%;
+        background-color: #F3F3F2;
+        box-sizing: border-box;
+        padding: 14px;
+        cursor: pointer;
     }
 
     .dynamic-news>div>div:nth-child(1){
@@ -285,17 +311,19 @@
         margin-bottom: 0px;
     }
 
+
+
     /* Date Div */
     .dynamic-news>div>div:nth-child(2){
         border: 1px solid transparent;
         margin-top: 0px;
         height: 25px;
         padding-left: 10px;
-        font-family: "Open Sans", Arial, sans-serif;
-        font-size: 11px;
+        font-size: 14px;
         line-height: 25px;
-        color: #a6a6a6;
         background-color: #f2f2f2;
+        font-family: "Roboto Slab", Georgia, serif;
+        color: #19232d;
     }
 
 
@@ -303,9 +331,10 @@
     .dynamic-news>div>div:nth-child(3){
         height: 36px;
         margin-top: 5px;
-        font-family: "Roboto Slab", Georgia, serif;
+        font-family: "Open Sans", Arial, sans-serif;
         color: #19232d;
-        font-size: 14px;
+        font-size: 11px;
+        color: #a6a6a6;
         line-height: 18.2px;
         padding-left: 14px;
         padding-right: 14px;
@@ -331,8 +360,9 @@
         border: 1px solid transparent;
     }
 
-
-
+.div4{
+    padding-top: 1%;
+}
     /* Dynamic part End */
 
     /* Left Box End*/
@@ -355,6 +385,13 @@
         margin-bottom: 35px;
     }
 
+    .dynamic-news > div{
+        cursor: pointer;
+    }
+      
+    .imgm{
+        width: 99%;
+    }
     .head-box >div{
         height: 32px;
         display: flex;
@@ -371,7 +408,7 @@
         border-bottom: 2px solid #548A2F;
     }
 
-    .head-box >div:hover:{
+    .head-box >div:hover{
         border-bottom: 2px solid #548A2F;
     }
 
@@ -464,3 +501,27 @@
 
 /* === Footer design End ===  */
 
+
+#mainDiv{
+    height: 400px;
+    border: 1px transparent;
+    width: 45.5%;
+    background-color: #F3F3F2;
+    box-sizing: border-box;
+    padding: 14px;
+    cursor: pointer;
+    margin-bottom: 6%;
+}
+
+#pagination{
+    position: absolute;
+    top: 272%;
+    left: 36%;
+    width: 100%;
+    padding-top: 3%;
+}
+
+#spage{
+    margin-left: 1%;
+    margin-right: 1%;
+}

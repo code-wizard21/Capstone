@@ -5,7 +5,7 @@
 document.querySelector("#logo").addEventListener("click", ()=>{
     window.location.href = "index.html";
 })
-
+  
 
 // navbar popup functionality
 document.querySelector("#giveOTP").style.visibility = "hidden";
